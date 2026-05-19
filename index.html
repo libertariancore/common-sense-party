@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Common Sense Party — Begin The World Over Again</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#08090d;--deep:#0c0e15;--gold:#c8a84b;--gold-pale:#e8d28a;--cream:#e8dfc8;--red:#c0392b;--green:#27ae60;--white:#f8f5ee;--gray:#8c9ab0;--gray-light:#c4cdd8;--border:rgba(200,168,75,.18);--bdim:rgba(255,255,255,.06)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold)}
+::selection{background:var(--gold);color:var(--ink)}
+.w{max-width:1200px;margin:0 auto;padding:0 2.5rem}
+.serif{font-family:'Cormorant Garamond',serif}.mono{font-family:'DM Mono',monospace}
+.gold{color:var(--gold)}.green{color:var(--green)}.red{color:var(--red)}
+.pad{padding:7rem 0}.pad-sm{padding:5rem 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+@media(max-width:900px){.g3,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:999;transition:all .4s}
+#nav.sc{background:rgba(8,9,13,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(20px)}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 2.5rem;max-width:1400px;margin:0 auto}
+.nb{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;letter-spacing:.12em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+.nm{display:flex;gap:1.5rem;list-style:none}
+.nm a{font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.nm a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--ink);padding:.5rem 1.3rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all .2s}
+.nc:hover{background:var(--gold-pale)}
+
+/* HERO */
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% -10%,rgba(200,168,75,.07) 0%,transparent 55%),linear-gradient(170deg,#08090d 0%,#0d111a 60%,#0a0e17 100%)}
+.hrl{position:absolute;left:2.5rem;top:50%;transform:translateY(-50%);width:1px;height:40%;background:linear-gradient(180deg,transparent,var(--gold),transparent);opacity:.3}
+.hc{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:8rem 2.5rem 6rem;display:grid;grid-template-columns:1fr .5fr;gap:4rem;align-items:center}
+@media(max-width:900px){.hc{grid-template-columns:1fr}}
+.hey{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:su .8s .2s forwards}
+.ht{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:300;line-height:1.02;color:var(--white);opacity:0;animation:su .9s .35s forwards}
+.ht em{font-style:italic;color:var(--gold)}.ht strong{font-weight:700;display:block}
+.hr{width:4rem;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:2rem 0;opacity:0;animation:su .8s .5s forwards}
+.hs{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--gray-light);max-width:560px;opacity:0;animation:su .8s .6s forwards}
+.hs strong{color:var(--white);font-weight:500}
+.ha{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:2.5rem;opacity:0;animation:su .8s .75s forwards}
+.bg{background:var(--gold);color:var(--ink);padding:.85rem 2.2rem;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all .25s;display:inline-block}
+.bg:hover{background:var(--gold-pale);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,168,75,.3)}
+.bgh{background:transparent;color:var(--gold);padding:.85rem 2.2rem;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);transition:all .25s;display:inline-block}
+.bgh:hover{border-color:var(--gold);background:rgba(200,168,75,.05)}
+.hp{opacity:0;animation:su .8s .9s forwards}
+.pq{background:rgba(200,168,75,.04);border:1px solid var(--border);border-left:3px solid var(--gold);padding:2rem}
+.pqt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;font-weight:300;line-height:1.7;color:var(--cream)}
+.pqa{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--gray);margin-top:1rem;letter-spacing:.1em}
+.hctr{margin-top:2rem;padding:1.2rem;background:rgba(139,26,26,.08);border:1px solid rgba(192,57,43,.2)}
+.hcl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--red);text-transform:uppercase;margin-bottom:.5rem}
+.hcv{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--red);font-variant-numeric:tabular-nums}
+.hcs{font-size:.7rem;color:var(--gray);margin-top:.3rem}
+
+/* SECTION LABELS */
+.sl{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:300;line-height:1.08;color:var(--white)}
+.st strong{font-weight:700}.st em{font-style:italic;color:var(--gold)}
+.sb{font-size:.95rem;font-weight:300;line-height:1.9;color:var(--gray-light);max-width:660px;margin-top:1rem}
+
+/* CRISIS */
+#crisis{background:var(--deep);border-top:1px solid rgba(192,57,43,.15);border-bottom:1px solid rgba(192,57,43,.15)}
+.crb{display:flex;overflow-x:auto;scrollbar-width:none}
+.crb::-webkit-scrollbar{display:none}
+.cri{flex:1;min-width:160px;padding:2.5rem 1.5rem;border-right:1px solid var(--bdim);text-align:center}
+.cri:last-child{border-right:none}
+.crn{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--red);line-height:1}
+.crn.g{color:var(--gold)!important}
+.crl{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gray);margin-top:.5rem;line-height:1.5}
+
+/* PHILOSOPHY */
+.phg{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:5rem}
+@media(max-width:768px){.phg{grid-template-columns:1fr}}
+.bb{background:rgba(200,168,75,.04);border:1px solid var(--border);padding:2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;line-height:1.75;color:var(--cream)}
+.bb cite{font-style:normal;font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gray);display:block;margin-top:1rem}
+.phc{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+@media(max-width:900px){.phc{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.phc{grid-template-columns:1fr}}
+.pc{background:rgba(255,255,255,.02);border:1px solid var(--bdim);padding:2.2rem;position:relative;overflow:hidden;transition:all .35s}
+.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.pc:hover{background:rgba(200,168,75,.04);transform:translateY(-3px)}
+.pc:hover::after{transform:scaleX(1)}
+.pci{font-size:1.6rem;margin-bottom:.8rem}
+.pct{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gold-pale);margin-bottom:.7rem}
+.pcp{font-size:.82rem;font-weight:300;line-height:1.75;color:var(--gray)}
+
+/* 3 PANELS */
+.ppg{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:420px}
+@media(max-width:768px){.ppg{grid-template-columns:1fr}}
+.pp{position:relative;overflow:hidden;padding:4rem 2.5rem;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--bdim)}
+.pp:last-child{border-right:none}
+.ppbg{position:absolute;inset:0;transition:transform .6s}
+.pp:hover .ppbg{transform:scale(1.05)}
+.ppb1{background:radial-gradient(ellipse at 50% 0%,rgba(139,26,26,.25) 0%,transparent 70%)}
+.ppb2{background:radial-gradient(ellipse at 50% 0%,rgba(200,168,75,.15) 0%,transparent 70%)}
+.ppb3{background:radial-gradient(ellipse at 50% 0%,rgba(26,74,46,.25) 0%,transparent 70%)}
+.ppi{font-size:3rem;margin-bottom:1.5rem;position:relative;z-index:1}
+.ppt{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;line-height:1.15;margin-bottom:.8rem;position:relative;z-index:1}
+.ppd{font-size:.82rem;font-weight:300;line-height:1.7;color:var(--gray);position:relative;z-index:1}
+.pps{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-top:1rem;position:relative;z-index:1}
+
+/* CARDS */
+.card{background:rgba(255,255,255,.02);border:1px solid var(--bdim);padding:2.2rem;transition:all .35s}
+.card:hover{border-color:var(--border);transform:translateY(-3px)}
+.ci{font-size:2rem;margin-bottom:1rem}
+.ct{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold-pale);margin-bottom:.7rem}
+.cp{font-size:.8rem;font-weight:300;line-height:1.75;color:var(--gray)}
+.cp strong{color:var(--white);font-weight:500}
+.cp ul{list-style:none;margin-top:.5rem}
+.cp ul li{padding:.25rem 0;display:flex;gap:.5rem}
+.cp ul li::before{content:'→';color:var(--gold);flex-shrink:0}
+
+/* POWER */
+.phl{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,12vw,11rem);font-weight:700;line-height:.9;color:var(--gold);letter-spacing:-.02em;text-align:center;margin:3rem 0 1rem}
+.phlbl{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.25em;color:var(--gray);text-transform:uppercase;text-align:center;margin-bottom:4rem}
+.c2{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center}
+@media(max-width:768px){.c2{grid-template-columns:1fr}}
+.vsl{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gray);text-align:center}
+.pcol{background:rgba(255,255,255,.02);border:1px solid var(--bdim);padding:2.5rem}
+.pcol.bad{border-color:rgba(192,57,43,.2);background:rgba(192,57,43,.03)}
+.pcol.good{border-color:var(--border);background:rgba(200,168,75,.04)}
+.pcl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem}
+.pcl.bad{color:var(--red)}.pcl.good{color:var(--gold)}
+.pctit{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--white);margin-bottom:1.5rem}
+.prow{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--bdim);font-size:.83rem}
+.prow:last-child{border-bottom:none}
+.pk{color:var(--gray);font-weight:300}.pv{font-weight:600}
+.pv.m{color:var(--red)}.pv.p{color:var(--green)}
+.ptot{margin-top:1.5rem;padding:1rem;display:flex;justify-content:space-between;border:1px solid var(--border)}
+.ptotk{color:var(--white);font-weight:600;text-transform:uppercase;font-size:.75rem;letter-spacing:.08em}
+.ptotv{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700}
+
+/* INFO BOX */
+.ib{background:rgba(200,168,75,.04);border:1px solid var(--border);padding:2rem;margin-top:2rem}
+.ibg{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start}
+.ibicon{font-size:2rem}
+.ibtit{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold-pale);margin-bottom:.6rem}
+.ibtxt{font-size:.83rem;line-height:1.75;color:var(--gray-light)}
+.ibtxt strong{color:var(--white)}
+
+/* VAT */
+.vts{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:2rem}
+@media(max-width:900px){.vts{grid-template-columns:1fr 1fr}}
+.vt{padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim)}
+.vtp{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;line-height:1;margin-bottom:.6rem}
+.vtn{font-size:.8rem;font-weight:600;margin-bottom:.5rem;color:var(--white)}
+.vtd{font-size:.72rem;color:var(--gray);line-height:1.55}
+.vt1{background:rgba(39,174,96,.06)}.vt1 .vtp{color:var(--green)}
+.vt2{background:rgba(100,200,100,.04)}.vt2 .vtp{color:#7dc87d}
+.vt3{background:rgba(200,168,75,.04)}.vt3 .vtp{color:var(--gold)}
+.vt4{background:rgba(255,140,0,.05)}.vt4 .vtp{color:#ffa030}
+.vt5{background:rgba(192,57,43,.07)}.vt5 .vtp{color:var(--red)}
+.vm3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:3rem}
+@media(max-width:768px){.vm3{grid-template-columns:1fr}}
+.vm{padding:2rem;border:1px solid var(--bdim);text-align:center}
+.vmv{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;margin-bottom:.5rem}
+.vm.minus .vmv{color:var(--red)}.vm.plus .vmv{color:var(--green)}
+.vm.result{background:rgba(200,168,75,.06);border-color:var(--border)}.vm.result .vmv{color:var(--gold);font-size:3rem}
+.vml{font-size:.75rem;color:var(--gray);line-height:1.5}
+
+/* BUDGET TABLES */
+.tabs{display:flex;border-bottom:1px solid var(--bdim);margin-bottom:3rem}
+.tb{padding:.9rem 1.8rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--gray);border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s}
+.tb.on{color:var(--gold);border-bottom-color:var(--gold)}
+.tp{display:none}.tp.on{display:block}
+.bt{width:100%;border-collapse:collapse}
+.bt th{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:.8rem 1rem;border-bottom:1px solid var(--border);text-align:left}
+.bt th:last-child{text-align:right}
+.bt td{padding:.85rem 1rem;border-bottom:1px solid var(--bdim)}
+.bt tr:hover td{background:rgba(200,168,75,.02)}
+.bt td:first-child{font-size:.88rem;color:var(--white)}
+.bt td:nth-child(2){font-family:'DM Mono',monospace;font-size:.72rem;color:var(--gray)}
+.bt td:last-child{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;text-align:right}
+.bt td:last-child.pos{color:var(--green)}.bt td:last-child.neg{color:var(--red)}.bt td:last-child.gld{color:var(--gold)}.bt td:last-child.neu{color:var(--gray)}
+.tag{display:inline-block;font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.1em;padding:.2rem .5rem;font-weight:500}
+.tc{background:rgba(192,57,43,.12);color:var(--red)}.tn{background:rgba(200,168,75,.12);color:var(--gold)}.tr{background:rgba(255,165,0,.1);color:orange}.tx{background:rgba(100,150,255,.1);color:#7ab0ff}.ta{background:rgba(39,174,96,.1);color:var(--green)}
+.btot td{padding:1.2rem 1rem;background:rgba(200,168,75,.06);border-top:1px solid var(--border);border-bottom:none}
+.btot td:last-child{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;text-align:right}
+
+/* SOVEREIGN FUND */
+.fst{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:3rem}
+@media(max-width:768px){.fst{grid-template-columns:1fr 1fr}}
+.fs{padding:2rem;background:rgba(255,255,255,.02);border:1px solid var(--bdim);text-align:center}
+.fsv{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.5rem}
+.fsl{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gray);letter-spacing:.08em;line-height:1.5}
+
+/* RETIREMENT */
+.rc{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:4rem}
+@media(max-width:768px){.rc{grid-template-columns:1fr}}
+.rcc{padding:2.5rem;border:1px solid var(--bdim)}
+.rcc.bad{border-color:rgba(192,57,43,.3);background:rgba(192,57,43,.04)}
+.rcc.good{border-color:var(--border);background:rgba(200,168,75,.04)}
+.rcl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+.rcl.bad{color:var(--red)}.rcl.good{color:var(--gold)}
+.rct{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--white);margin-bottom:1.2rem}
+.rcr{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--bdim);font-size:.82rem}
+.rck{color:var(--gray);font-weight:300}.rcv{font-weight:600}
+.rcv.bad{color:var(--red)}.rcv.good{color:var(--green)}
+.rtw{overflow-x:auto;margin:3rem 0}
+.rt{width:100%;border-collapse:collapse;min-width:720px}
+.rt th{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem .8rem;border-bottom:1px solid var(--border);text-align:center;color:var(--gray)}
+.rt th:first-child{text-align:left;color:var(--gold)}
+.rt td{padding:.85rem .8rem;border-bottom:1px solid var(--bdim);text-align:center;font-size:.8rem;font-family:'DM Mono',monospace}
+.rt td:first-child{text-align:left;color:var(--white);font-family:'Outfit',sans-serif;font-size:.82rem}
+.rt .guar td{color:var(--gray)}.rt .prob td{color:var(--gold)}.rt .targ td{color:var(--green)}
+.rt .ss td{color:var(--red)}.rt .wow td{background:rgba(200,168,75,.06);color:var(--gold-pale);font-weight:700}
+
+/* LPP */
+.lpg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
+@media(max-width:768px){.lpg{grid-template-columns:1fr}}
+.lpr{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--bdim);font-size:.83rem}
+.lpk{color:var(--gray);font-weight:300}
+.lpv{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold)}
+
+/* INHERITANCE */
+.inhopts{display:flex;gap:2px;flex-wrap:wrap;margin-top:1rem}
+.inhopt{flex:1;min-width:110px;padding:1.2rem;background:rgba(255,255,255,.03);border:1px solid var(--bdim);text-align:center;transition:all .2s}
+.inhopt:hover{border-color:var(--gold);background:rgba(200,168,75,.08)}
+.inhopt.def{border-color:var(--gold);background:rgba(200,168,75,.08)}
+.inhpct{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold)}
+.inhlbl{font-size:.68rem;color:var(--gray);margin-top:.3rem}
+
+/* MUTUAL */
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3rem}
+@media(max-width:768px){.mg{grid-template-columns:1fr}}
+.mc{padding:2.5rem;border:1px solid var(--border)}
+.mc.a{background:rgba(200,168,75,.04)}.mc.b{background:rgba(100,150,255,.03);border-color:rgba(100,150,255,.2)}
+.mh{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+.mh.a{color:var(--gold)}.mh.b{color:#7ab0ff}
+.mt{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:1.2rem}
+.mr{display:flex;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--bdim);font-size:.82rem;align-items:flex-start}
+.mr:last-child{border-bottom:none}
+.mrt{color:var(--gray);font-weight:300;line-height:1.6}
+.mrt strong{color:var(--white);font-weight:500}
+
+/* PEACE */
+.ppc{margin-top:4rem}
+.pp2{display:grid;grid-template-columns:60px 1fr auto;gap:2rem;align-items:start;padding:2.2rem 0;border-bottom:1px solid var(--bdim)}
+.pp2:last-child{border-bottom:none}
+.pp2n{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:rgba(200,168,75,.15);line-height:1}
+.pp2t{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--white);margin-bottom:.5rem}
+.pp2p{font-size:.83rem;font-weight:300;color:var(--gray);line-height:1.75}
+.pp2s{text-align:right;white-space:nowrap;padding-top:.3rem}
+.pp2sv{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--gold);display:block}
+.pp2sl{font-family:'DM Mono',monospace;font-size:.55rem;color:var(--gray)}
+@media(max-width:768px){.pp2{grid-template-columns:1fr;gap:1rem}.pp2s{text-align:left}}
+
+/* LIBERTY SQUARE */
+.lsu{background:rgba(6,8,14,.9);border:1px solid var(--border);overflow:hidden;margin-top:3rem}
+.lsc{background:rgba(200,168,75,.05);border-bottom:1px solid var(--border);padding:.8rem 1.5rem;display:flex;align-items:center;gap:1.5rem}
+.lsbr{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.lstg{font-size:.65rem;color:var(--gray)}
+.lsf{padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:768px){.lsf{grid-template-columns:1fr}}
+.lsp{background:rgba(255,255,255,.02);border:1px solid var(--bdim);padding:1.2rem;transition:border-color .2s}
+.lsp:hover{border-color:var(--border)}
+.lsph{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem;gap:.5rem;flex-wrap:wrap}
+.lspu{display:flex;align-items:center;gap:.7rem}
+.lspfl{font-size:.95rem}
+.lspn{font-size:.8rem;font-weight:600;color:var(--white)}
+.lspsc{font-size:.62rem;color:var(--gray);font-family:'DM Mono',monospace}
+.lsbd{display:flex;gap:.3rem;flex-wrap:wrap}
+.badge{font-family:'DM Mono',monospace;font-size:.57rem;padding:.12rem .4rem;font-weight:500}
+.bcr{background:rgba(120,160,255,.1);color:#90b8ff;border:1px solid rgba(120,160,255,.15)}
+.bcl{background:rgba(100,200,100,.1);color:#80c880;border:1px solid rgba(100,200,100,.15)}
+.blib{background:rgba(255,200,50,.1);color:#ffc832;border:1px solid rgba(255,200,50,.15)}
+.bctr{background:rgba(200,200,200,.08);color:#bbb;border:1px solid rgba(200,200,200,.1)}
+.bint{background:rgba(200,100,255,.1);color:#d080ff;border:1px solid rgba(200,100,255,.15)}
+.bfct{background:rgba(39,174,96,.1);color:var(--green);border:1px solid rgba(39,174,96,.15)}
+.bprt{background:rgba(255,160,0,.1);color:orange;border:1px solid rgba(255,160,0,.15)}
+.lspt{font-size:.79rem;color:var(--gray);line-height:1.65}
+.lspt strong{color:var(--white)}
+
+/* COMPARE */
+.cmpt{width:100%;border-collapse:collapse;margin-top:3rem;overflow-x:auto;display:block}
+.cmpt th{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem .8rem;border-bottom:1px solid var(--border);color:var(--gray);text-align:center}
+.cmpt th:first-child{text-align:left;color:var(--gold)}
+.cmpt td{padding:.85rem .8rem;border-bottom:1px solid var(--bdim);font-size:.8rem;text-align:center;vertical-align:middle}
+.cmpt td:first-child{text-align:left;color:var(--white)}
+.cmpt tr:hover td{background:rgba(200,168,75,.02)}
+.cw{color:var(--gold);font-weight:600}.dc{color:var(--gray)}.rc2{color:var(--gray)}
+.cc{background:rgba(200,168,75,.04)}
+
+/* PUB HEALTH */
+.phcard{padding:2.5rem;border:1px solid var(--bdim);background:rgba(255,255,255,.02)}
+.phicon{font-size:2.5rem;margin-bottom:1rem}
+.phtit{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--gold-pale);margin-bottom:.5rem}
+.phcost{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);letter-spacing:.08em;margin-bottom:1rem}
+.phlist{list-style:none}
+.phlist li{font-size:.79rem;color:var(--gray);padding:.4rem 0;border-bottom:1px solid var(--bdim);display:flex;gap:.6rem;line-height:1.6}
+.phlist li:last-child{border-bottom:none}
+.phlist li::before{content:'·';color:var(--gold);flex-shrink:0}
+.phph{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin:.8rem 0 .4rem}
+
+/* GREEN */
+.gs{margin-top:3rem;padding:2.5rem;background:rgba(39,174,96,.04);border:1px solid rgba(39,174,96,.15)}
+.gst{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--white);margin-bottom:1.5rem}
+.gsg{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+@media(max-width:768px){.gsg{grid-template-columns:1fr}}
+.gsit{font-weight:600;color:var(--green);font-size:.85rem;margin-bottom:.5rem}
+.gsip{font-size:.78rem;color:var(--gray);line-height:1.7}
+
+/* OASIS */
+.oag{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:3rem}
+@media(max-width:768px){.oag{grid-template-columns:1fr}}
+.oac{padding:2.5rem;border:1px solid rgba(100,180,255,.15);background:rgba(100,180,255,.03)}
+.oai{font-size:2rem;margin-bottom:1rem}
+.oat{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#90d0ff;margin-bottom:.7rem}
+.oad{font-size:.8rem;color:var(--gray);line-height:1.75}
+.oad strong{color:var(--white)}
+
+/* IMMIGRATION */
+.ims{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:3rem}
+@media(max-width:768px){.ims{grid-template-columns:1fr 1fr}}
+.im{padding:2rem;border:1px solid var(--bdim);background:rgba(255,255,255,.02)}
+.imn{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:rgba(200,168,75,.2);line-height:1;margin-bottom:.5rem}
+.imt{font-weight:600;font-size:.9rem;color:var(--white);margin-bottom:.3rem}
+.ims2{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);margin-bottom:.8rem}
+.imd{font-size:.78rem;color:var(--gray);line-height:1.65}
+
+/* CTA */
+#cta{padding:10rem 0;background:var(--ink);text-align:center;position:relative;overflow:hidden}
+.ctabg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(200,168,75,.05) 0%,transparent 65%)}
+.ctar{width:3rem;height:1px;background:var(--gold);margin:0 auto 2rem}
+.ctaq{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,3vw,2rem);font-weight:300;line-height:1.5;color:var(--cream);max-width:760px;margin:0 auto}
+.ctaa{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;color:var(--gray);margin-top:1.5rem}
+.ctat{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6rem);font-weight:300;line-height:1.05;margin:3rem 0 1.5rem}
+.ctat strong{font-weight:700}.ctat em{font-style:italic;color:var(--gold)}
+.ctab{font-size:.95rem;font-weight:300;line-height:1.85;color:var(--gray-light);max-width:540px;margin:0 auto 3rem}
+.kpis{display:flex;justify-content:center;flex-wrap:wrap;gap:3rem;margin:4rem 0}
+.kv{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gold);display:block}
+.kl{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;color:var(--gray);text-transform:uppercase;margin-top:.3rem}
+
+/* FOOTER */
+footer{background:var(--deep);border-top:1px solid var(--bdim);padding:3rem 0}
+.fi{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.fbr{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold)}
+.fm{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.9rem;color:var(--gray)}
+.fl{display:flex;gap:1.2rem;flex-wrap:wrap}
+.fl a{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;color:var(--gray);text-decoration:none;transition:color .2s;text-transform:uppercase}
+.fl a:hover{color:var(--gold)}
+.fc{font-family:'DM Mono',monospace;font-size:.58rem;color:rgba(140,154,176,.4)}
+
+/* ANIMATIONS */
+@keyframes su{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(32px);transition:opacity .75s,transform .75s cubic-bezier(.22,.61,.36,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media(max-width:768px){.nm,.nc{display:none}.hc{padding:7rem 1.5rem 4rem}.w{padding:0 1.5rem}.kpis{gap:2rem}.kv{font-size:2rem}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="ni">
+    <a class="nb" href="#hero">★ Common Sense Party</a>
+    <ul class="nm">
+      <li><a href="#power">Gains</a></li>
+      <li><a href="#budget">Budget</a></li>
+      <li><a href="#sovereign">Fund</a></li>
+      <li><a href="#retirement">Retirement</a></li>
+      <li><a href="#health">Health</a></li>
+      <li><a href="#peace">Peace</a></li>
+      <li><a href="#compare">vs. Duopoly</a></li>
+      <li><a href="#green">Oasis America</a></li>
+    </ul>
+    <a href="#cta" class="nc">Join Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg"></div><div class="hrl"></div>
+  <div class="hc">
+    <div>
+      <p class="hey">★ The Common Sense Party — A New American Covenant</p>
+      <h1 class="ht"><em>We have it in our</em><br><strong>power to begin<br>the world over again.</strong></h1>
+      <div class="hr"></div>
+      <p class="hs"><strong>Zero federal income tax. Zero property tax. Zero inheritance tax.</strong> A retirement account worth over $1M that you own — and your children inherit tax-free. Healthcare at half the cost, run by you. A military that defends America but never starts wars. <strong>Thomas Paine called it Common Sense. We're finally delivering it.</strong></p>
+      <div class="ha"><a href="#power" class="bg">See Your Gains →</a><a href="#budget" class="bgh">Read the Full Plan</a></div>
+    </div>
+    <div class="hp">
+      <div class="pq"><p class="pqt">"It is the good fortune of many to live distant from the scene of sorrow; the evil is not sufficiently brought to their doors to make them feel the precariousness with which all American property is possessed."</p><p class="pqa">— Thomas Paine · Common Sense · 1776 · Born February 9, 1737</p></div>
+      <div class="hctr"><p class="hcl">💸 Federal debt added since Jan 1, 2025</p><p class="hcv" id="counter">$0</p><p class="hcs">$1,830,000,000,000/yr deficit · ~$58,000/second · Gas tax unchanged since 1993</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CRISIS -->
+<section id="crisis"><div class="crb">
+  <div class="cri rv"><div class="crn">$6,900B</div><div class="crl">Federal spending 2024<br>+38% since 2019</div></div>
+  <div class="cri rv d1"><div class="crn">$1,830B</div><div class="crl">Annual deficit<br>printed from nothing</div></div>
+  <div class="cri rv d2"><div class="crn">37%</div><div class="crl">Top income tax rate<br>on your labor</div></div>
+  <div class="cri rv d3"><div class="crn g">2032</div><div class="crl">Social Security<br>insolvency date</div></div>
+  <div class="cri rv d4"><div class="crn">1.59</div><div class="crl">US fertility rate 2024<br>record low — all time</div></div>
+  <div class="cri rv"><div class="crn">18¢</div><div class="crl">Federal gas tax/gallon<br>unchanged since 1993</div></div>
+  <div class="cri rv d1"><div class="crn">$370M</div><div class="crl">Big Pharma lobbying/yr<br>buying your health policy</div></div>
+</div></section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <div class="phg">
+      <div><p class="sl rv">Our Founding Principles</p><h2 class="st rv">Not Left. Not Right.<br><strong><em>Constitutional.</em></strong></h2><p class="sb rv">The Common Sense Party proposes no new ideology — only the return to the original one, written by men who had just freed themselves from exactly the kind of government we live under today.</p></div>
+      <div class="rv d2"><div class="bb">"The conscious and intelligent manipulation of the organized habits and opinions of the masses is an important element in democratic society… We are governed, our minds are molded, our tastes formed, our ideas suggested, largely by men we have never heard of."<cite>— Edward Bernays · Propaganda · 1928 · We name the manipulators. We end the manipulation.</cite></div></div>
+    </div>
+    <div class="phc">
+      <div class="pc rv"><div class="pci">⚖️</div><div class="pct">Non-Aggression Principle</div><div class="pcp">No person or institution — government included — may initiate force against another. Your life, body, and property belong to you. The state exists only to protect these rights, never to redistribute them or profit from your ignorance of them.</div></div>
+      <div class="pc rv d1"><div class="pci">🏛️</div><div class="pct">Constitutional Fidelity</div><div class="pcp">The 16th Amendment (income tax, 1913) was the original sin of modern big government. We repeal it. We restore Article I Section 10, the 10th Amendment, and a government the Founders designed — strictly limited, locally controlled.</div></div>
+      <div class="pc rv d2"><div class="pci">🔒</div><div class="pct">Absolute Property Rights</div><div class="pcp">Zero federal property tax. Zero inheritance tax. What you earn, build, and own is yours — permanently. Your retirement is real capital you own. Your land is yours, not leased from Washington at an annual rate called a "tax."</div></div>
+      <div class="pc rv d3"><div class="pci">🌿</div><div class="pct">Golden Rule Abroad</div><div class="pcp">We close 750+ foreign military bases. End nation-building and proxy wars. Maintain the world's most powerful defensive force — and never fire first. Respect every sovereign nation as we demand they respect ours. The NAP, applied internationally.</div></div>
+      <div class="pc rv d1"><div class="pci">🛡️</div><div class="pct">Stand Your Ground — Federal</div><div class="pcp">Federal law protecting your right to defend yourself, your family, and your property without duty to retreat. Self-ownership means nothing if you can be prosecuted for protecting what is yours. Signed into federal law. No exceptions.</div></div>
+      <div class="pc rv d2"><div class="pci">💰</div><div class="pct">Sound Money</div><div class="pcp">Inflation is the most dishonest tax in history — no vote required, paid by the future. We legalize gold, silver, and competing cryptocurrencies. We constitutionally cap the Fed at 2%/year. The government stops stealing your savings through the back door.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE PANELS -->
+<section style="padding:0;background:var(--deep);overflow:hidden"><div class="ppg">
+  <div class="pp"><div class="ppbg ppb1"></div><div class="ppi">🔥</div><h3 class="ppt" style="color:#e57373">What They<br>Took From You</h3><p class="ppd">The income tax. Your paycheck intercepted before you see it. The inflation tax: your savings diluted in silence while they fund endless wars. 110 years of wealth redirected from your family to Washington's machine.</p><p class="pps" style="color:var(--red)">$14,900<span style="font-size:.5em;font-weight:300">/yr taken from avg. worker</span></p></div>
+  <div class="pp"><div class="ppbg ppb2"></div><div class="ppi">⭐</div><h3 class="ppt" style="color:var(--gold)">What We<br>Give You Back</h3><p class="ppd">Your full paycheck. A retirement worth over $1M that you own and your children inherit. Healthcare at half the cost. A government that stays out of your life, your wallet, and your choices.</p><p class="pps" style="color:var(--gold)">+$30,000<span style="font-size:.5em;font-weight:300">/yr dual-income family</span></p></div>
+  <div class="pp"><div class="ppbg ppb3"></div><div class="ppi">🌱</div><h3 class="ppt" style="color:#81c784">What You Build<br>For Your Children</h3><p class="ppd">$441,000 in capital at birth. A retirement that cannot go bankrupt. 100% heritable wealth. End generational poverty — not through redistribution, but through compound interest and ownership.</p><p class="pps" style="color:var(--green)">$441k<span style="font-size:.5em;font-weight:300"> per child at 65 · $10k at birth · 6%/yr</span></p></div>
+</div></section>
+
+<!-- PURCHASING POWER -->
+<section id="power" style="background:var(--deep);position:relative;overflow:hidden" class="pad">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(200,168,75,.04) 0%,transparent 60%)"></div>
+  <div class="w" style="position:relative">
+    <p class="sl rv">The Core Argument</p>
+    <h2 class="st rv">What Actually Happens to <strong><em>Your</em></strong> Money</h2>
+    <p class="sb rv">The CSP introduces a federal VAT — but abolishes income tax, slashes insurance costs, and creates an employer profit dividend. The net result: the largest increase in take-home pay in American history, without printing a dollar.</p>
+    <div class="phl rv">+$30k</div>
+    <p class="phlbl rv d1">Annual net gain · median dual-income family · $116,000/yr household income</p>
+    <div class="c2 rv">
+      <div class="pcol bad">
+        <p class="pcl bad">— Status Quo (2024)</p><p class="pctit">What Washington Takes</p>
+        <div class="prow"><span class="pk">Federal income tax (both)</span><span class="pv m">-$18,000</span></div>
+        <div class="prow"><span class="pk">Health insurance family avg.</span><span class="pv m">-$25,572</span></div>
+        <div class="prow"><span class="pk">Payroll tax (SS + Medicare)</span><span class="pv m">-$8,874</span></div>
+        <div class="prow"><span class="pk">Federal VAT</span><span class="pv">$0</span></div>
+        <div class="prow"><span class="pk">Employer retirement dividend</span><span class="pv">$0</span></div>
+        <div class="ptot"><span class="ptotk">Annual burden</span><span class="ptotv" style="color:var(--red)">-$52,446</span></div>
+      </div>
+      <div class="vsl">vs.</div>
+      <div class="pcol good">
+        <p class="pcl good">+ Common Sense Party</p><p class="pctit">What You Actually Keep</p>
+        <div class="prow"><span class="pk">Federal income tax</span><span class="pv p">$0 — ABOLISHED</span></div>
+        <div class="prow"><span class="pk">Health Mutual A/B</span><span class="pv p">-$12,000 (save $13,572)</span></div>
+        <div class="prow"><span class="pk">Payroll → mutual contribution</span><span class="pv p">-$2,000 (save $6,874)</span></div>
+        <div class="prow"><span class="pk">Net VAT cost on consumption</span><span class="pv m">-$4,000</span></div>
+        <div class="prow"><span class="pk">Employer 5% profit dividend</span><span class="pv p">+$5,800</span></div>
+        <div class="ptot"><span class="ptotk">Net annual gain</span><span class="ptotv" style="color:var(--green)">+$30,798</span></div>
+      </div>
+    </div>
+    <div class="ib rv"><div class="ibg"><span class="ibicon">📊</span><div><p class="ibtit">John Dewey: Trust the Public with Complete Information</p><p class="ibtxt">We show you the full math. The VAT replaces the income tax — it does not add to it. A family earning $60k spending $45k taxable pays ~$4,500 in VAT. They saved $6,600 in income tax. They are <strong>ahead by $2,100 on tax alone</strong> — before health mutual (-$6,000), employer dividend (+$2,900), and zero property tax. The organic shopper pays 5% VAT. The ultra-processed buyer pays 45%. <strong>For the first time ever, healthy food is the most tax-advantaged product in America.</strong></p></div></div></div>
+    <h3 class="st rv" style="font-size:2rem;margin-top:5rem">Your Gains — <em>By Group</em></h3>
+    <div class="g3" style="margin-top:2rem">
+      <div class="card rv"><div class="ci">🏭</div><div class="ct">Blue-Collar Worker ($42k)</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">+$11,200/yr</div><div class="cp"><ul><li>Full paycheck back — income tax abolished: +$4,200</li><li>Health Mutual: saves $6,000 vs current premiums</li><li>Employer profit dividend → retirement capital you OWN</li><li>$10,000 birth account per child compounds to $441k at 65</li><li>Stand Your Ground — federal law, your home is your castle</li></ul></div></div>
+      <div class="card rv d1"><div class="ci">💼</div><div class="ct">Middle-Class Family ($116k)</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">+$30,800/yr</div><div class="cp"><ul><li>Zero income tax both salaries: +$18,000 day one</li><li>Health Mutual: save $13,572 vs current premiums</li><li>Patent reform: generic drugs -40 to 60%</li><li>LibertyLearn: free K-12 with AI tutor for every child</li><li>Zero federal inheritance tax: 100% of wealth to family</li></ul></div></div>
+      <div class="card rv d2"><div class="ci">🌾</div><div class="ct">Homesteader / Farmer</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">Maximum Liberty</div><div class="cp"><ul><li>Zero federal property tax — your land is truly yours</li><li>Zero income tax on everything you grow and sell</li><li>Organic/bio at 5% VAT — most tax-advantaged products</li><li>No IRS, no declarations, no audits — ever</li><li>Right to Nature on BLM lands — guaranteed by federal law</li></ul></div></div>
+      <div class="card rv"><div class="ci">🏗️</div><div class="ct">Small Business Owner</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">CT: 10% Flat</div><div class="cp"><ul><li>World's lowest corporate tax — beats Ireland 12.5%, Singapore 17%</li><li>Reinvest profits: zero additional tax. Simple, transparent.</li><li>No IRS — open-source database replaces 90,000 agents</li><li>4–6 weeks paid vacation = documented +8-12% productivity</li><li>Healthier workforce (MAHA) = lower mutual costs</li></ul></div></div>
+      <div class="card rv d1"><div class="ci">🏦</div><div class="ct">Corporations &amp; Investors</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">+$300B FDI/yr</div><div class="cp"><ul><li>10% flat CT: GAFAM leaves Ireland &amp; Singapore — comes home</li><li>Capital gains: 10% → 5% → 2.5% over 15 years. Published roadmap.</li><li>Constitutional monetary rule: plan a decade without inflation risk</li><li>Largest consumer market, enriched by +$30k/family</li><li>Patent reform forces genuine innovation over financial engineering</li></ul></div></div>
+      <div class="card rv d2"><div class="ci">🌿</div><div class="ct">Environmentally Conscious</div><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem">Real Results</div><div class="cp"><ul><li>45% sin tax on ultra-processed: reformulate or disappear</li><li>CT 5% for nuclear, hydro, geothermal — market chooses green</li><li>Oasis America: water in desert, forests from drones</li><li>Right to Nature on all BLM public lands — guaranteed</li><li>Bio/organic at 5% VAT: cheapest food category, always</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VAT -->
+<section id="vat" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">For Progressive Critics — The Complete Picture</p>
+    <h2 class="st rv">The VAT Is Not<br><strong><em>What They Fear</em></strong></h2>
+    <div class="ib rv"><div class="ibg"><span class="ibicon">💡</span><div><p class="ibtit">The Left's Concern — Answered with Math</p><p class="ibtxt">A consumption tax can be regressive if taken alone. We also abolish the income tax. A worker earning $42k spending $35k taxable pays ~$3,500 VAT. They saved <strong>$4,200 in income tax</strong>. Net: +$700 on tax alone — before mutual savings (-$6,000) and employer dividend (+$2,100). Working families come out <strong>$8,000-12,000 ahead annually</strong>. And the organic spinach bag carries 5% VAT. The Cheetos bag carries 45% VAT. <strong>Math rewards the choices that reduce your future healthcare costs.</strong></p></div></div></div>
+    <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--gold);margin:3rem 0 1rem;text-transform:uppercase">Federal VAT — 5 Tiers · Tax-Inclusive Pricing at Point of Sale · Dual Unit Labels (oz + g, °F + °C)</p>
+    <div class="vts">
+      <div class="vt vt1 rv"><div class="vtp">5%</div><div class="vtn">✅ Organic / Bio / Whole</div><div class="vtd">Fresh produce, whole foods, organic certified, seeds, basic medications, water. Healthiest choices — lowest tax. Always.</div></div>
+      <div class="vt vt2 rv d1"><div class="vtp">10%</div><div class="vtn">Standard Goods</div><div class="vtd">Everyday purchases under $300. Basic clothing, tools, household items, simple electronics.</div></div>
+      <div class="vt vt3 rv d2"><div class="vtp">15%</div><div class="vtn">Mid-Range</div><div class="vtd">Items $300 to $60,000. Cars, appliances, furniture, technology, services.</div></div>
+      <div class="vt vt4 rv d3"><div class="vtp">20%</div><div class="vtn">Luxury</div><div class="vtd">Over $60,000. Yachts, private jets, luxury vehicles, high-end watches, fine jewelry.</div></div>
+      <div class="vt vt5 rv d4"><div class="vtp">35–45%</div><div class="vtn">⚠ Sin Tax</div><div class="vtd">Processed foods (35%), ultra-processed / carcinogens / endocrine disruptors (45%). You pay the true societal cost of your choice.</div></div>
+    </div>
+    <div class="vm3">
+      <div class="vm minus rv"><div class="vmv">-$4,500</div><div class="vml">Net VAT cost<br>median earner ($58k, $45k taxable)</div></div>
+      <div class="vm plus rv d1"><div class="vmv">+$6,600</div><div class="vml">Income tax saved<br>(abolished completely)</div></div>
+      <div class="vm result rv d2"><div class="vmv">+$2,100</div><div class="vml">Net gain on tax alone<br><em>before mutual, dividend &amp; zero property tax</em></div></div>
+    </div>
+    <div class="ib rv" style="margin-top:2rem"><div class="ibg"><span class="ibicon">🏷️</span><div><p class="ibtit">Price Transparency Law + Dual Unit Labeling</p><p class="ibtxt">All prices displayed to consumers must include VAT — as in France, UK, and all EU countries. No more surprise at the register. All commercial products display dual units: <strong>1 lb (454g) · 16 fl oz (473ml) · 350°F / 175°C</strong>. Not a mandate to switch to metric — just more information, zero less freedom. The market adapts naturally over a generation.</p></div></div></div>
+  </div>
+</section>
+
+<!-- SOVEREIGN FUND -->
+<section id="sovereign" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">The Long Game</p>
+    <h2 class="st rv">National Sovereign<br><strong><em>Wealth Fund</em></strong></h2>
+    <p class="sb rv">The most libertarian idea in this manifesto: a government that funds itself through investments — not taxes. As the fund grows, taxes fall. The endgame is a state that costs its citizens almost nothing because it earns its own way. Zero income tax becomes not just a policy — but a permanent constitutional reality.</p>
+    <div class="fst">
+      <div class="fs rv"><div class="fsv">$2.5T</div><div class="fsl">Initial raise<br>Citizen Bonds + land sales</div></div>
+      <div class="fs rv d1"><div class="fsv">6.5%</div><div class="fsl">Annual return target<br>70% global equities, 25% bonds, 5% gold</div></div>
+      <div class="fs rv d2"><div class="fsv">$18T</div><div class="fsl">Projected value<br>Year 20</div></div>
+      <div class="fs rv d3"><div class="fsv">$500B</div><div class="fsl">Annual passive income at 3%<br>Year 20 — funds the entire state</div></div>
+    </div>
+    <div class="g3" style="margin-top:3rem">
+      <div class="card rv"><div class="ci">💼</div><div class="ct">How It's Funded</div><div class="cp">• <strong>Citizen Bonds</strong> (CPI+0.5%, capped $100k/person) → $200B initial over 3 years<br>• <strong>10% of Corporate Tax</strong> flows → ~$28B/year continuously<br>• <strong>Federal land sales</strong> (10% of 640M acres, 15 years) → $160B/year<br>• <strong>Federal gas tax 45¢/gallon</strong> → +$36B/year directed to fund<br>• <strong>Covered calls</strong> on 15-20% of equity portfolio → +1-2% additional yield</div></div>
+      <div class="card rv d1"><div class="ci">🔒</div><div class="ct">Constitutional Protections</div><div class="cp">• <strong>Supermajority required</strong> to modify: 3/4 Congress + national referendum<br>• State is <strong>purely passive — zero voting rights</strong> on held equities<br>• <strong>10-year lock-up minimum</strong> per position. Max 0.1% sold per quarter with 90-day public notice<br>• <strong>Real-time public FOSS dashboard</strong>: any citizen can audit every holding<br>• No politician may ever direct investment choices</div></div>
+      <div class="card rv d2"><div class="ci">🎯</div><div class="ct">The Endgame</div><div class="cp">Year 5: ~$90B/year → partially covers debt interest<br>Year 10: ~$200B/year → budget nearly balanced passively<br>Year 15: ~$340B/year → replaces all remaining individual taxation<br>Year 20: <strong>$500B/year</strong> → fully funds the minimal constitutional state<br><br><strong>The CSP is the only party with a mathematical pathway to zero taxes — permanently.</strong></div></div>
+    </div>
+    <div class="ib rv"><div class="ibg"><span class="ibicon">⛽</span><div><p class="ibtit">Federal Gas Tax: 45 Cents — Restoring the Inflation-Adjusted 1993 Value</p><p class="ibtxt">The federal gas tax has been <strong>18.4¢/gallon since October 1, 1993 — unchanged for 32 years</strong>. Adjusted for 122% cumulative inflation, restoring its real value requires ~42-46¢. We set it at <strong>45¢</strong>, generating +$36B/year directed 100% to the National Sovereign Wealth Fund. Impact per fill-up (16 gallons): <strong>+$4.26</strong>. The income tax abolition saves you $14,900/year = <strong>3,500 fill-ups</strong> worth of annual savings. The math is overwhelming. This is not a tax increase — it is restoring a 1993 constitutional authorization, inflated honestly.</p></div></div></div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section id="budget" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:4rem;align-items:end">
+      <div><p class="sl rv">Full Fiscal Transparency</p><h2 class="st rv">Where Every Dollar<br><strong><em>Goes &amp; Comes From</em></strong></h2></div>
+      <div class="ib rv d2" style="margin-top:0"><p style="font-size:.83rem;color:var(--gray-light);line-height:1.7"><strong style="color:var(--gold)">Walter Lippmann:</strong> Citizens cannot govern what they cannot see. Every modern government hides its budget in complexity. We lay out every dollar — old vs. new — and let you judge. No asterisks. No political sleight of hand.</p></div>
+    </div>
+    <div class="tabs">
+      <button class="tb on" onclick="st2('spend',this)">Federal Spending</button>
+      <button class="tb" onclick="st2('revenue',this)">Revenue Sources</button>
+      <button class="tb" onclick="st2('transfer',this)">10th Amendment Transfers</button>
+    </div>
+    <div class="tp on" id="tab-spend">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+        <div><p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.15em;color:var(--red);margin-bottom:1.5rem;text-transform:uppercase">— Current: $6,900B/year</p>
+        <table class="bt"><tr><td>Social Security</td><td><span class="tag tc">→ Capitalization</span></td><td class="neg">$1,500B</td></tr><tr><td>Medicare + Medicaid + ACA</td><td><span class="tag tc">→ Mutual A &amp; B</span></td><td class="neg">$1,663B</td></tr><tr><td>Defense (DoD)</td><td><span class="tag tr">Reduced</span></td><td class="neg">$872B</td></tr><tr><td>Debt interest</td><td><span class="tag tc">→ Sovereign Fund</span></td><td class="neg">$892B</td></tr><tr><td>Veterans Affairs</td><td><span class="tag tr">Reformed</span></td><td class="neg">$526B</td></tr><tr><td>Social welfare (non-health)</td><td><span class="tag tc">Minimized</span></td><td class="neg">$476B</td></tr><tr><td>Education Dept.</td><td><span class="tag tx">→ States + LibertyLearn</span></td><td class="neg">$238B</td></tr><tr><td>Transport + HUD + Agriculture</td><td><span class="tag tc">Cut / private</span></td><td class="neg">$229B</td></tr><tr><td>Foreign aid</td><td><span class="tag tc">Abolished</span></td><td class="neg">$72B</td></tr><tr><td>IRS + admin bloat</td><td><span class="tag tc">Abolished</span></td><td class="neg">$400B</td></tr><tr class="btot"><td><strong>TOTAL CURRENT</strong></td><td></td><td class="neg">$6,900B</td></tr></table></div>
+        <div><p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.15em;color:var(--gold);margin-bottom:1.5rem;text-transform:uppercase">+ Common Sense Budget (Year 1)</p>
+        <table class="bt"><tr><td>Retirement transition (recognition bonds)</td><td><span class="tag tn">Capitalization</span></td><td class="gld">$900B</td></tr><tr><td>Health — State residual only</td><td><span class="tag tn">Mutual A+B</span></td><td class="gld">$90B</td></tr><tr><td>Defense (national doctrine only)</td><td><span class="tag tn">Strongest defensive</span></td><td class="gld">$500B</td></tr><tr><td>Debt interest → Sovereign Fund pays</td><td><span class="tag tr">Transitional</span></td><td class="neu">$892B</td></tr><tr><td>Veterans Affairs (reformed + Mutual B)</td><td><span class="tag tn">Reformed</span></td><td class="gld">$300B</td></tr><tr><td>Safety net (extreme poverty only)</td><td><span class="tag tn">Targeted</span></td><td class="gld">$150B</td></tr><tr><td>Education → States + LibertyLearn</td><td><span class="tag ta">10th Amendment</span></td><td class="pos">$0</td></tr><tr><td>Interstate infrastructure only</td><td><span class="tag tn">Federal only</span></td><td class="gld">$60B</td></tr><tr><td>Diplomacy (zero foreign aid)</td><td><span class="tag tn">Consulates only</span></td><td class="gld">$10B</td></tr><tr><td>Science + Liberty Square + FOSS + Green</td><td><span class="tag tn">Targeted</span></td><td class="gld">$86B</td></tr><tr><td>Birth accounts ($11,500 × 3.6M births)</td><td><span class="tag tn">Natalist</span></td><td class="gld">$41B</td></tr><tr><td>Public Health (ticks + rabies + mosquitoes)</td><td><span class="tag tn">Non-toxic</span></td><td class="gld">$1B</td></tr><tr class="btot"><td><strong>TOTAL CSP (Year 1)</strong></td><td></td><td class="gld">$3,030B</td></tr></table></div>
+      </div>
+    </div>
+    <div class="tp" id="tab-revenue">
+      <table class="bt"><thead><tr><th>Source</th><th>Rate</th><th>Year 1</th><th>Year 5 (dynamic)</th><th>Status</th></tr></thead>
+      <tr><td>VAT — Bio/organic/whole foods</td><td style="color:var(--green);font-family:'DM Mono',monospace;font-size:.72rem">5%</td><td class="neu">$15B</td><td class="pos">$22B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>VAT — Basic goods &lt;$300</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">10%</td><td class="neu">$700B</td><td class="pos">$870B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>VAT — Mid-range $300–$60k</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">15%</td><td class="neu">$900B</td><td class="pos">$1,100B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>VAT — Luxury &gt;$60k</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">20%</td><td class="neu">$30B</td><td class="pos">$40B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>Sin Tax — Processed foods</td><td style="color:orange;font-family:'DM Mono',monospace;font-size:.72rem">35%</td><td class="neu">$175B</td><td class="neu">$120B*</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>Sin Tax — Ultra-processed / carcinogens</td><td style="color:var(--red);font-family:'DM Mono',monospace;font-size:.72rem">45%</td><td class="neu">$160B</td><td class="neu">$80B*</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>Corporate Tax — 10% flat (all profits)</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">10%</td><td class="gld">$280B</td><td class="pos">$360B</td><td><span class="tag tr">REDUCED from 21%</span></td></tr>
+      <tr><td>Federal gas tax (45¢ → Sovereign Fund)</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">45¢/gal</td><td class="gld">$61B</td><td class="gld">$58B</td><td><span class="tag tr">UP from 18.4¢</span></td></tr>
+      <tr><td>Targeted tariffs</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">10%</td><td class="gld">$310B</td><td class="gld">$310B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>Capital gains + dividends (at broker source)</td><td style="color:var(--gold);font-family:'DM Mono',monospace;font-size:.72rem">10%→2.5%</td><td class="gld">$105B</td><td class="neu">$60B</td><td><span class="tag tr">PATH DOWN</span></td></tr>
+      <tr><td>Fossil fuel extraction sin tax ($5–12/barrel)</td><td>—</td><td class="gld">$20B</td><td class="neu">$15B</td><td><span class="tag tn">NEW</span></td></tr>
+      <tr><td>Endocrine disruptors tax (transitional)</td><td style="color:var(--red);font-family:'DM Mono',monospace;font-size:.72rem">50–80%</td><td class="neu">$100B</td><td class="neu">$10B*</td><td><span class="tag tc">TRANSITIONAL</span></td></tr>
+      <tr><td style="color:var(--green);font-weight:700">Federal INCOME TAX</td><td>—</td><td class="pos" style="font-weight:700">$0</td><td class="pos" style="font-weight:700">$0</td><td><span class="tag ta">ABOLISHED</span></td></tr>
+      <tr><td style="color:var(--green);font-weight:700">Federal PROPERTY TAX</td><td>—</td><td class="pos" style="font-weight:700">$0</td><td class="pos" style="font-weight:700">$0</td><td><span class="tag ta">ABOLISHED</span></td></tr>
+      <tr><td style="color:var(--green);font-weight:700">Federal ESTATE / INHERITANCE TAX</td><td>—</td><td class="pos" style="font-weight:700">$0</td><td class="pos" style="font-weight:700">$0</td><td><span class="tag ta">ABOLISHED</span></td></tr>
+      <tr class="btot"><td><strong>TOTAL REVENUES</strong></td><td></td><td class="gld">$2,856B</td><td class="pos">$3,045B+</td><td></td></tr></table>
+      <p style="margin-top:1rem;font-family:'DM Mono',monospace;font-size:.62rem;color:var(--gray)">* Sin tax revenues decline as companies reformulate — this is success. Health savings of $500–800B/year on mutual costs exceed lost sin tax by 10-20x.</p>
+    </div>
+    <div class="tp" id="tab-transfer">
+      <p style="margin-bottom:2rem;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--cream);line-height:1.7">"The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people." <span style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--gray);font-style:normal;display:block;margin-top:.5rem">— 10th Amendment. We take this literally.</span></p>
+      <table class="bt"><thead><tr><th>Program</th><th>Current Cost</th><th>New Jurisdiction</th><th>Federal Saving</th></tr></thead>
+      <tr><td>Department of Education</td><td class="neg">$238B</td><td>States + LibertyLearn (free, open-source)</td><td class="pos">$238B</td></tr>
+      <tr><td>Medicaid — block grants to States</td><td class="neg">$626B</td><td>States + Mutual B (member-governed)</td><td class="pos">$576B</td></tr>
+      <tr><td>HUD Housing programs</td><td class="neg">$73B</td><td>States + private market</td><td class="pos">$73B</td></tr>
+      <tr><td>Agricultural subsidies</td><td class="neg">$30B</td><td>Free market — eliminated entirely</td><td class="pos">$30B</td></tr>
+      <tr><td>Local transportation funding</td><td class="neg">$66B</td><td>States + municipalities</td><td class="pos">$66B</td></tr>
+      <tr><td>EPA local regulation</td><td class="neg">$35B</td><td>States (federal minimum standards remain)</td><td class="pos">$20B</td></tr>
+      <tr><td>Local policing grants</td><td class="neg">$20B</td><td>Counties + Sheriffs (Constitutional)</td><td class="pos">$20B</td></tr>
+      <tr class="btot"><td><strong>Total transferred to States</strong></td><td class="neg">$1,088B</td><td></td><td class="pos">$1,023B freed</td></tr></table>
+    </div>
+  </div>
+</section>
+
+<!-- RETIREMENT -->
+<section id="retirement" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">The Pension Revolution</p>
+    <h2 class="st rv">Your Retirement <strong><em>Belongs to You.</em></strong></h2>
+    <p class="sb rv">Social Security is a mathematical impossibility dressed as a promise. The trust fund runs dry in 2032 with automatic 23-25% benefit cuts. We replace the pyramid scheme with real capital you own, growing at market rates. The guaranteed minimum alone beats what Social Security will pay after its crash.</p>
+    <div class="rc">
+      <div class="rcc bad rv"><p class="rcl bad">⚠ Social Security — The Ponzi Scheme</p><p class="rct">The Math That Doesn't Work</p>
+        <div class="rcr"><span class="rck">Worker-to-retiree ratio, 1965</span><span class="rcv">4:1</span></div>
+        <div class="rcr"><span class="rck">Worker-to-retiree ratio, 2024</span><span class="rcv bad">2.7:1 (falling)</span></div>
+        <div class="rcr"><span class="rck">Trust fund insolvency</span><span class="rcv bad">2032</span></div>
+        <div class="rcr"><span class="rck">Automatic benefit cut at insolvency</span><span class="rcv bad">-23 to -25%</span></div>
+        <div class="rcr"><span class="rck">What your children inherit</span><span class="rcv bad">$0</span></div>
+        <div class="rcr"><span class="rck">Avg. benefit post-insolvency (2032)</span><span class="rcv bad">~$1,428/month</span></div>
+        <div class="rcr"><span class="rck">75-year unfunded liability</span><span class="rcv bad">$25 trillion</span></div>
+      </div>
+      <div class="rcc good rv d1"><p class="rcl good">✓ CSP: Capitalization — Capital You Own</p><p class="rct">Three Layers. All Yours.</p>
+        <div class="rcr"><span class="rck">Birth capital account</span><span class="rcv good">$10,000 at birth</span></div>
+        <div class="rcr"><span class="rck">At 65 years, 6%/yr guaranteed</span><span class="rcv good">$441,000</span></div>
+        <div class="rcr"><span class="rck">Employer profit dividend (5%, 30 yrs)</span><span class="rcv good">+$229,000 additional</span></div>
+        <div class="rcr"><span class="rck">State-guaranteed minimum rate</span><span class="rcv good">2% (principal protected)</span></div>
+        <div class="rcr"><span class="rck">Guaranteed min. (10% contrib, 40 yrs)</span><span class="rcv good">$2,175/month</span></div>
+        <div class="rcr"><span class="rck">vs. SS post-insolvency 2032</span><span class="rcv good">+52% better — guaranteed</span></div>
+        <div class="rcr"><span class="rck">What your children inherit</span><span class="rcv good">Flexible: 0–100% tax-free</span></div>
+      </div>
+    </div>
+    <h3 class="st rv" style="font-size:2rem;margin-bottom:.5rem">The Three Scenarios — <em>Guaranteed. Probable. Target.</em></h3>
+    <p style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--gray);margin-bottom:2rem">Base: $68k salary · $10k birth account · 40 years contribution from age 25 · Monthly income at 4% withdrawal rule</p>
+    <div class="rtw rv">
+      <table class="rt">
+        <thead><tr><th>Contribution Level</th><th>Annual Amount</th><th style="color:var(--gray)">Guaranteed 2%<br>Capital at 65</th><th style="color:var(--gray)">Guaranteed 2%<br>Monthly</th><th style="color:var(--gold)">Probable 4%<br>Capital at 65</th><th style="color:var(--gold)">Probable 4%<br>Monthly</th><th style="color:var(--green)">Target 6%<br>Capital at 65</th><th style="color:var(--green)">Target 6%<br>Monthly</th></tr></thead>
+        <tbody>
+          <tr class="ss"><td colspan="2">Social Security (2032 projected)</td><td>—</td><td style="color:var(--red);font-weight:700">$1,428/mo ⚠</td><td>—</td><td style="color:var(--red);font-weight:700">$1,428/mo ⚠</td><td>—</td><td style="color:var(--red);font-weight:700">$1,428/mo ⚠</td></tr>
+          <tr><td>Birth account only (no contribution)</td><td>$0</td><td class="guar">$36,500</td><td class="guar">$122/mo</td><td class="prob">$128,000</td><td class="prob">$427/mo</td><td class="targ">$441,000</td><td class="targ">$1,470/mo</td></tr>
+          <tr class="wow"><td>10% of salary</td><td>$6,800/yr</td><td>$652,000</td><td><strong>$2,175/mo ✓ Beats 2032 SS</strong></td><td>$1,097,000</td><td><strong>$3,657/mo (+156%)</strong></td><td>$2,019,000</td><td><strong>$6,730/mo (+371%)</strong></td></tr>
+          <tr><td>15% of salary</td><td>$10,200/yr</td><td class="guar">$857,000</td><td class="guar">$2,857/mo</td><td class="prob">$1,420,000</td><td class="prob">$4,733/mo</td><td class="targ">$2,605,000</td><td class="targ">$8,683/mo</td></tr>
+          <tr><td>20% of salary</td><td>$13,600/yr</td><td class="guar">$1,062,000</td><td class="guar">$3,540/mo</td><td class="prob">$1,743,000</td><td class="prob">$5,810/mo</td><td class="targ">$3,192,000</td><td class="targ">$10,640/mo</td></tr>
+          <tr><td>25% of salary</td><td>$17,000/yr</td><td class="guar">$1,267,000</td><td class="guar">$4,223/mo</td><td class="prob">$2,066,000</td><td class="prob">$6,887/mo</td><td class="targ">$3,779,000</td><td class="targ">$12,597/mo</td></tr>
+          <tr><td>35% (maximum)</td><td>$23,800/yr</td><td class="guar">$1,677,000</td><td class="guar">$5,590/mo</td><td class="prob">$2,713,000</td><td class="prob">$9,043/mo</td><td class="targ">$4,954,000</td><td class="targ">$16,513/mo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:.62rem;color:var(--gray);margin-top:1rem">Capital includes birth account + Liberty Pension Plus + employer dividend ($3,400/yr, 30yrs adds $269k at 6%). Employer dividend is separate — included above. State guarantees 2% on principal contributed. All withdrawals from age 60 (partial), 65 (full), 70 (maximum pension).</p>
+
+    <!-- INHERITANCE -->
+    <h3 class="st rv" style="font-size:2rem;margin-top:5rem;margin-bottom:1rem">Inheritance — <em>You Choose the Rules</em></h3>
+    <p class="sb rv" style="margin-bottom:2rem">Two accounts, two sets of rules. Liberty Pension Plus (voluntary) is 100% yours to direct freely. Base accounts (birth + employer dividend) follow a configurable framework you set once and update anytime.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+      <div>
+        <div style="background:rgba(200,168,75,.06);border:1px solid var(--gold);padding:2rem;margin-bottom:2rem">
+          <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem">Liberty Pension Plus — 100% Your Choice</p>
+          <p style="font-size:.85rem;color:var(--white);line-height:1.7">Every dollar in your voluntary LPP account passes <strong>100% tax-free</strong> to whomever you name: children, grandchildren, friends, partner, associations, charities, or the state. No government clawback. No minimum. No conditions. Your private wealth vehicle — entirely sovereign.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.02);border:1px solid var(--bdim);padding:2rem">
+          <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem">Family Tree Fallback (if no designation)</p>
+          <p style="font-size:.82rem;color:var(--gray);line-height:1.7">System searches: children → grandchildren → parents → siblings → cousins (1st degree). Grandchildren inherit their parent's share if that parent predeceased you. You may designate any non-family beneficiary — friends, step-children, any person, organization, or association. If truly no heir found: returns to Sovereign Fund to finance the next generation's birth accounts.</p>
+        </div>
+      </div>
+      <div>
+        <p style="font-weight:700;color:var(--white);margin-bottom:1rem">Base Accounts (Birth + Employer Dividend): Choose Your Structure</p>
+        <p style="font-size:.78rem;color:var(--gray);margin-bottom:1.5rem">Default if no selection: 50% to partner as lifetime pension (4%/yr), 50% to children. Adjust any time.</p>
+        <div class="inhopts">
+          <div class="inhopt"><div class="inhpct">25%</div><div class="inhlbl">to children<br>75% pension</div></div>
+          <div class="inhopt def"><div class="inhpct">50%</div><div class="inhlbl">← default<br>balanced</div></div>
+          <div class="inhopt"><div class="inhpct">75%</div><div class="inhlbl">to children<br>25% pension</div></div>
+          <div class="inhopt"><div class="inhpct">100%</div><div class="inhlbl">full inheritance<br>immediately</div></div>
+        </div>
+        <div style="margin-top:1rem;padding:1.2rem;background:rgba(200,168,75,.04);border:1px solid var(--border);font-size:.78rem;color:var(--gray);line-height:1.7">
+          <strong style="color:var(--white)">Partner pension:</strong> Non-inherited portion converts to 4%/year annual pension for surviving partner, for life. At partner's death, remaining balance passes to children. <strong style="color:var(--white)">Hybrid option:</strong> e.g., 50% to children immediately + partner receives 4%/yr on remaining 50%, which passes to children at partner's death. <strong style="color:var(--white)">Minimum per child: $100k</strong> (guaranteed by birth account alone — at 65, $441k covers 4 children at $100k each).
+        </div>
+        <div style="margin-top:1rem;padding:1.2rem;background:rgba(200,168,75,.04);border:1px solid var(--border);font-size:.78rem;color:var(--gray);line-height:1.7">
+          <strong style="color:var(--white)">Capital flexibility from age 65:</strong> Withdraw birth capital as a lump sum (reducing your monthly pension proportionally) — for a major purchase, first home deposit, eliminating debt, or gifting to grandchildren. Zero federal gift tax. Zero federal donation tax. Your capital, your decision.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LPP -->
+<section id="pension-plus" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">Voluntary Retirement Booster</p>
+    <h2 class="st rv">Liberty Pension Plus —<br><strong><em>Your Capital. 100% Heritable.</em></strong></h2>
+    <p class="sb rv">The base system guarantees every American a retirement better than Social Security. Liberty Pension Plus supercharges it — on your terms, managed by competing private firms, with the full remaining balance passing 100% tax-free to your heirs. No government clawback. Ever.</p>
+    <div class="lpg">
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:1.5rem">Account Structure</p>
+        <div class="lpr"><span class="lpk">Participation</span><span class="lpv">100% voluntary</span></div>
+        <div class="lpr"><span class="lpk">Contribution tranches</span><span class="lpv">5% / 10% / 15% / 20% / 25% / 35%</span></div>
+        <div class="lpr"><span class="lpk">Entry fee (State 0.75% + Manager 0.75%)</span><span class="lpv">1.5% one-time</span></div>
+        <div class="lpr"><span class="lpk">Management fee (State 0.5% + Manager 0.5%)</span><span class="lpv">1.0%/year</span></div>
+        <div class="lpr"><span class="lpk">State guarantee</span><span class="lpv">Nominal capital guaranteed</span></div>
+        <div class="lpr"><span class="lpk">Competing managers per employer</span><span class="lpv">Minimum 3 (you choose)</span></div>
+        <div class="lpr"><span class="lpk">Allocation</span><span class="lpv">Conservative / Balanced / Dynamic</span></div>
+        <div class="lpr"><span class="lpk">Partial withdrawal</span><span class="lpv">Age 60</span></div>
+        <div class="lpr"><span class="lpk">Full withdrawal</span><span class="lpv">Age 65</span></div>
+        <div class="lpr"><span class="lpk">Exceptions (zero penalty)</span><span class="lpv" style="font-size:.78rem">Terminal illness, disability, first home ($100k), unemployment 12m+</span></div>
+        <div class="lpr" style="background:rgba(200,168,75,.08);padding:.8rem;border:1px solid var(--border)"><span class="lpk" style="color:var(--gold);font-weight:600">At death — passes to heirs</span><span class="lpv">100% tax-free, your choice</span></div>
+      </div>
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:1.5rem">10% Contribution · $68k Salary · 30 Years · 6%/yr</p>
+        <div style="padding:2rem;background:rgba(200,168,75,.04);border:1px solid var(--border)">
+          <div class="rcr"><span class="rck">Annual contribution</span><span class="rcv good">$6,800/yr</span></div>
+          <div class="rcr"><span class="rck">LPP value after 30 years at 6%</span><span class="rcv good">$539,000</span></div>
+          <div class="rcr"><span class="rck">+ Birth account at 65 (6%)</span><span class="rcv good">$441,000</span></div>
+          <div class="rcr"><span class="rck">+ Employer dividend (30 yrs, 6%)</span><span class="rcv good">$269,000</span></div>
+          <div style="background:rgba(200,168,75,.08);border:1px solid var(--border);padding:1rem;margin-top:1rem;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:var(--white);font-size:.85rem">TOTAL CAPITAL AT 65</span><span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold)">$1,249,000</span></div>
+          <p style="font-size:.72rem;color:var(--gray);margin-top:.8rem">Monthly at 4% rule: <strong style="color:var(--gold)">$4,163/month</strong> vs. Social Security 2032: $1,428/month. <strong>+192% more retirement income</strong> — guaranteed by math, not by politicians' promises.</p>
+        </div>
+        <div class="g2" style="margin-top:2px">
+          <div class="card"><div style="font-size:1.2rem;margin-bottom:.5rem">🏆</div><p style="font-weight:600;font-size:.82rem;color:var(--gold-pale);margin-bottom:.4rem">Beats Social Security</p><p style="font-size:.75rem;color:var(--gray)">SS gives $0 at death. Your LPP balance — potentially $500k+ — passes completely tax-free to your children. Generational wealth for everyone.</p></div>
+          <div class="card"><div style="font-size:1.2rem;margin-bottom:.5rem">🔒</div><p style="font-weight:600;font-size:.82rem;color:var(--gold-pale);margin-bottom:.4rem">Government Guarantee</p><p style="font-size:.75rem;color:var(--gray)">The state guarantees your nominal capital. Markets crash — you never lose what you put in. Returns are variable but your principal is always protected.</p></div>
+          <div class="card"><div style="font-size:1.2rem;margin-bottom:.5rem">⚔️</div><p style="font-weight:600;font-size:.82rem;color:var(--gold-pale);margin-bottom:.4rem">Competition = Low Fees</p><p style="font-size:.75rem;color:var(--gray)">Minimum 3 competing managers. Switch freely if yours underperforms. Total fees: 1.5% entry + 1.0%/year. Competitive with any market 401k.</p></div>
+          <div class="card"><div style="font-size:1.2rem;margin-bottom:.5rem">📊</div><p style="font-weight:600;font-size:.82rem;color:var(--gold-pale);margin-bottom:.4rem">Full Transparency</p><p style="font-size:.75rem;color:var(--gray)">Real-time balance on your phone. Every fee itemized. Open-source auditing by any citizen. No hidden charges. No surprises. No politics.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH -->
+<section id="health" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">Healthcare Revolution</p>
+    <h2 class="st rv">Half the Cost.<br><strong>Twice the <em>Freedom.</em></strong></h2>
+    <p class="sb rv">America spends $13,500 per person per year — more than any nation on Earth — and ranks last in health outcomes among wealthy countries. The problem is not medicine. It is 18% administrative overhead, Big Pharma patent monopolies of 20+ years, and an industry that profits from your chronic illness.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:4rem">
+      <div class="rcc bad rv"><p class="rcl bad">⚠ The Broken Status Quo</p><p class="rct">Big Insurance + Big Pharma Capture</p>
+        <div class="rcr"><span class="rck">Administrative overhead</span><span class="rcv bad">18%</span></div>
+        <div class="rcr"><span class="rck">Family premium average (2024)</span><span class="rcv bad">$25,572/yr</span></div>
+        <div class="rcr"><span class="rck">Pharma patent monopoly</span><span class="rcv bad">20+ years (with extensions)</span></div>
+        <div class="rcr"><span class="rck">US drug price vs. generic equivalent</span><span class="rcv bad">10 to 100× more</span></div>
+        <div class="rcr"><span class="rck">% costs from chronic/diet disease</span><span class="rcv bad">90%</span></div>
+        <div class="rcr"><span class="rck">Big Pharma lobbying spend/yr</span><span class="rcv bad">$370M+</span></div>
+        <div class="rcr"><span class="rck">Member governance</span><span class="rcv bad">Zero — shareholders rule</span></div>
+      </div>
+      <div class="rcc good rv d1"><p class="rcl good">✓ Common Sense: Mutual A + Mutual B</p><p class="rct">Members Govern. You Decide.</p>
+        <div class="rcr"><span class="rck">Administrative overhead</span><span class="rcv good">~6% (Kaiser Permanente model)</span></div>
+        <div class="rcr"><span class="rck">Estimated family cost</span><span class="rcv good">~$12,000/yr (-53%)</span></div>
+        <div class="rcr"><span class="rck">Pharma patent maximum (constitutional)</span><span class="rcv good">7 years, no extension</span></div>
+        <div class="rcr"><span class="rck">Generic drug impact</span><span class="rcv good">-40 to -60% on all medications</span></div>
+        <div class="rcr"><span class="rck">Long-term MAHA health savings</span><span class="rcv good">$500–800B/yr</span></div>
+        <div class="rcr"><span class="rck">Lobbying influence</span><span class="rcv good">Zero — nothing left to lobby for</span></div>
+        <div class="rcr"><span class="rck">Member governance</span><span class="rcv good">One member, one vote</span></div>
+      </div>
+    </div>
+
+    <h3 class="st rv" style="font-size:2rem;margin-top:5rem">Mutual A &amp; B — <em>How They Actually Work</em></h3>
+    <p style="font-size:.9rem;color:var(--gray);margin:1rem 0 0;line-height:1.7">Two non-profit cooperatives replacing the $1.7 trillion system. No shareholders. No profit motive. Nothing to lobby. Admin overhead falls from 18% to 6% — saving $200B+ annually before a single treatment changes. What happens to Aetna and UnitedHealth? They pivot to supplemental luxury coverage (private rooms, star physicians), international coverage, and specialized dental/vision packages. Competition from mutuals forces them to cut prices 30-40% or specialize upward. Both outcomes benefit you.</p>
+    <div class="mg">
+      <div class="mc a rv">
+        <p class="mh a">🏢 MUTUAL A — Corporate Health</p>
+        <p class="mt">For Employers &amp; Their Employees</p>
+        <div class="mr"><span>👥</span><div class="mrt"><strong>Who joins:</strong> Companies, voluntarily. Employer contributions fully deductible from corporate tax base. Covers employees and families. When you change jobs, coverage transfers to Mutual B seamlessly — no gap, no pre-existing condition exclusion, ever.</div></div>
+        <div class="mr"><span>💰</span><div class="mrt"><strong>Funded by:</strong> ~5% of payroll from employers. Employees contribute nothing extra. Drug negotiation joint with Mutual B: 200M+ members combined — the most powerful pharmaceutical negotiating body ever assembled. Germany's statutory funds achieve 40–70% lower drug prices this way.</div></div>
+        <div class="mr"><span>⚖️</span><div class="mrt"><strong>Governed by:</strong> Board elected by member companies. Zero state control. Zero shareholder dividends. All surplus reinvested in coverage improvements or contribution reductions.</div></div>
+        <div class="mr"><span>🔄</span><div class="mrt"><strong>Portability:</strong> Coverage portable across jobs. Pre-existing conditions never excluded. The collective absorbs risk — this is the entire point of a mutual.</div></div>
+      </div>
+      <div class="mc b rv d1">
+        <p class="mh b">👤 MUTUAL B — Citizen Health</p>
+        <p class="mt">For Everyone Not Covered by Mutual A</p>
+        <div class="mr"><span>🌐</span><div class="mrt"><strong>Who joins:</strong> Self-employed, freelancers, small business owners, unemployed, immigrants (Stage 2+, after 5 years work), retirees. No one is left without coverage — low-income members subsidized by the $90B/year federal safety net residual.</div></div>
+        <div class="mr"><span>📐</span><div class="mrt"><strong>Funded by:</strong> Progressive contributions based on income capacity — determined automatically through the open-source VAT database. Zero individual declaration required. No IRS involvement, ever.</div></div>
+        <div class="mr"><span>🗳️</span><div class="mrt"><strong>Governed by:</strong> One member, one vote. Annual general assembly elects the board. Coverage decisions made democratically. If members vote to add a treatment, it is added. No executive veto.</div></div>
+        <div class="mr"><span>🌍</span><div class="mrt"><strong>Immigration stages:</strong> Stage 0–1: GP and emergency access only — funded by their own contribution fund. Humane minimum with zero welfare net. Stage 2+ (5 years work): full Mutual B access with standard contribution. Fair, transparent, self-financing.</div></div>
+      </div>
+    </div>
+
+    <!-- PHARMA + LOBBYING -->
+    <div class="gs rv" style="background:rgba(200,168,75,.04);border-color:var(--border)">
+      <p class="gst">💊 Pharma Patent Reform + End of Lobbying</p>
+      <div class="gsg">
+        <div><p class="gsit">7-Year Patent Maximum</p><p class="gsip">Pharma patents cut from 20+ years to 7, non-renewable. No evergreening — one patent per active molecule. Ban on software patents in pharma. "Loser pays" for all patent litigation. India's Section 3d law proved this since 2005: same molecules, 5–10% of the American price.</p></div>
+        <div><p class="gsit">Big Food &amp; Pharma Tort Liability</p><p class="gsip">Remove the GRAS self-certification loophole. If your product causes provable chronic harm, you pay — no cap. Tobacco paid $246B in 1998. 45% sin tax creates the financial incentive to reformulate. Tort liability creates the existential incentive. Both together = the fastest food system reform in history.</p></div>
+        <div><p class="gsit">Why Lobbying Dies Structurally</p><p class="gsip">Zero income tax = zero tax code to exploit. 10% flat CT = zero exception to carve out. Patent reform constitutionally protected = nothing pharma can lobby for. Open-source transactions = no dark money. Mutual members govern = no insurance industry to capture. <strong>Lobbying becomes structurally pointless — not just illegal.</strong></p></div>
+      </div>
+    </div>
+
+    <!-- MAHA -->
+    <div class="gs rv">
+      <p class="gst">🥗 MAHA — Make America Healthy Again</p>
+      <div class="gsg">
+        <div><p class="gsit">🏷️ Full Transparency — Mandatory</p><p class="gsip">Traffic-light labeling on all packaging. All additives banned in Europe (Red 40, BHT, brominated vegetable oil, titanium dioxide) banned here immediately. Plain-language ingredient disclosure. No self-certification loopholes. The consumer chooses with complete information — not marketing spin designed by a $370M/year lobbying machine.</p></div>
+        <div><p class="gsit">⚖️ Big Food Accountability</p><p class="gsip">45% sin tax on ultra-processed creates powerful reformulation incentive. Tort liability for provable chronic harm removes the last shield. When there is nothing left to lobby for — because the tax is constitutional and the liability is unlimited — the industry reformulates. The market fixes what 50 years of regulation could not.</p></div>
+        <div><p class="gsit">🏃 Physical Education Standards</p><p class="gsip">3 hours minimum PE per week — state-level standard (10th Amendment, zero federal mandate). $500/child/year VAT credit for parents funding private sports clubs. 85% of American teens fail basic activity guidelines today. Healthier people = lower mutual costs = lower contributions for every member.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLIC HEALTH -->
+<section id="pubhealth" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">National Public Health Initiative</p>
+    <h2 class="st rv">Beating Disease at<br><strong><em>the Source — Not the Symptom</em></strong></h2>
+    <p class="sb rv">Three evidence-based, voluntary, non-toxic national programs. No mandates. No forced treatment. Total cost: ~$850M/year — covered by the additional $70B/year generated by raising Corporate Tax from 7.5% to 10%. Estimated disease burden prevented: $3–4B+/year. ROI: 4-5x minimum.</p>
+    <div class="g3" style="margin-top:4rem">
+      <div class="phcard rv">
+        <div class="phicon">🕷️</div><div class="phtit">National Tick Control Program</div><div class="phcost">~$300M/yr · Prevents $1B+/yr in Lyme disease costs</div>
+        <p class="phph">Biological Control (Priority)</p>
+        <ul class="phlist">
+          <li><strong style="color:var(--white)">Beauveria bassiana &amp; Metarhizium fungi:</strong> penetrate tick cuticle naturally. Drone-deployed in high-risk zones. Most promising non-toxic solution available.</li>
+          <li><strong style="color:var(--white)">Beneficial nematodes</strong> (Steinernema, Heterorhabditis): target larvae in soil in woodland edge zones and parks.</li>
+          <li><strong style="color:var(--white)">4-Poster deer devices:</strong> apply acaricide as deer feed. Proven 60–80% tick population reduction in Northeast US studies.</li>
+          <li><strong style="color:var(--white)">Tick tubes:</strong> permethrin-cotton targeting Peromyscus mice — the primary Lyme reservoir. $5-10/unit, community deployable.</li>
+          <li>Tick vaccine (VLA15, Phase 3 2026): available through mutual at standard cost — never mandated.</li>
+        </ul>
+      </div>
+      <div class="phcard rv d1">
+        <div class="phicon">🦊</div><div class="phtit">National Rabies Eradication</div><div class="phcost">~$150M/yr · ROI positive by Year 3 (current control: $500M+/yr)</div>
+        <p class="phph">Phase 1: Oral Wildlife Vaccination (Years 1–5)</p>
+        <ul class="phlist">
+          <li><strong style="color:var(--white)">ONRAB vaccine</strong> (marshmallow-flavored bait): 74% seroconversion vs. 30% for older vaccine. Safe if consumed by non-target species. $1.50/bait.</li>
+          <li>Targets: raccoons (East), skunks (Central), foxes (North/West), coyotes (Texas/SW). Already proven in Eastern US since 1990s. Scaling nationally.</li>
+          <li>Distribution: aircraft for rural zones, drones for dense/mountain/forest areas. 75 baits/km², August–October annually.</li>
+        </ul>
+        <p class="phph">Phase 2: Stray Dog &amp; Cat Vaccination (Parallel)</p>
+        <ul class="phlist">
+          <li>Free mobile clinics in urban areas. TNR (Trap-Neuter-Return) for feral cats.</li>
+          <li>Economics: PEP (post-exposure) costs $3,000+/person. Dog vaccination: ~$10. Extraordinary ROI — positive by Year 3.</li>
+        </ul>
+        <p class="phph">Phase 3–4: Bats + Permanent Surveillance</p>
+        <ul class="phlist">
+          <li>Bat-proofing of buildings. Awareness campaign (70% of US human rabies deaths are bat-related).</li>
+          <li>AI/drone early detection of outbreak clusters. Free post-exposure prophylaxis through Mutual B.</li>
+        </ul>
+      </div>
+      <div class="phcard rv d2">
+        <div class="phicon">🦟</div><div class="phtit">Integrated Mosquito Management (IMM)</div><div class="phcost">~$400M/yr · Prevents $2B+/yr (West Nile, Zika, Dengue, EEE)</div>
+        <p class="phph">Biological — Non-Toxic Priority</p>
+        <ul class="phlist">
+          <li><strong style="color:var(--white)">Bti tablets</strong> in stagnant water: $0.10-0.50/unit. Already used by CDC. Zero toxicity to humans, birds, fish, or beneficial insects.</li>
+          <li><strong style="color:var(--white)">Drone-deployed Beauveria bassiana:</strong> targets adult mosquitoes. $5-15/hectare. Proven in Brazil and India at scale.</li>
+          <li><strong style="color:var(--white)">Gambusia fish:</strong> 100 larvae/day. Already deployed in California. $0.01-0.10/fish. Self-sustaining in ponds and ditches.</li>
+        </ul>
+        <p class="phph">Advanced Genetic Methods (Proven &amp; Scaling)</p>
+        <ul class="phlist">
+          <li><strong style="color:var(--white)">Wolbachia:</strong> natural bacteria blocking Zika/Dengue in Aedes aegypti. 70-90% population reduction in 1-2 years. Self-sustaining. Already deployed in Miami, Houston, Los Angeles at $5-10/hectare/year.</li>
+          <li><strong style="color:var(--white)">SIT (Sterile Insect Technique):</strong> sterile male releases. 100% non-toxic, no GMOs in environment. Proven in Florida and Cayman Islands. Scaling to 10 states within 18 months.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:3rem;padding:2rem;background:rgba(39,174,96,.05);border:1px solid rgba(39,174,96,.15);text-align:center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--green)">~$850M/yr total · Fully covered by CT increase from 7.5% → 10%</div>
+      <p style="font-size:.8rem;color:var(--gray);margin-top:.5rem">Additional CT revenue: +$70B/year. Public health cost: $0.85B/year. <strong>The programs pay for themselves 4-5x over in prevented healthcare costs.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- LIBERTY SQUARE -->
+<section id="liberty" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">Digital Public Square</p>
+    <h2 class="st rv"><strong>Liberty Square</strong> —<br><em>The First Amendment Goes Global</em></h2>
+    <p class="sb rv">Not owned by a billionaire. Not subject to EU censorship law. Not optimized for advertising revenue. A government-built, FOSS platform protected by the 1st Amendment — where every political view competes on its merits, with radical transparency about who is speaking and how accurate they are. America's greatest export: the freedom to think out loud.</p>
+    <div class="lsu rv">
+      <div class="lsc"><span class="lsbr">★ LIBERTY SQUARE</span><span class="lstg">Protected by the First Amendment · Open Source · Community Governed · No Ads · No Owner · Global</span></div>
+      <div class="lsf">
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🏔️</span><div><div class="lspn">@TruthSeeker_WV · ★4.2</div><div class="lspsc">Unverified · Anonymous</div></div></div><div class="lsbd"><span class="badge bcr">Center-Right</span><span class="badge bfct">✓ Factual</span></div></div><p class="lspt">Bro the CSP single-handedly found a solution to the tick/autoimmune disease epidemic while Big Pharma had us at their mercy for 30 years. Destroyed the lobbying model. Ended patent monopolies. <strong>America is literally not for sale anymore.</strong> The uniparty never had a plan. CSP did it in one manifesto 🔥</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🌴</span><div><div class="lspn">@CaliforniaDem_Maria · ★4.6</div><div class="lspsc">Trust: 4.6/5 · Verified</div></div></div><div class="lsbd"><span class="badge bcl">Center-Left</span><span class="badge bfct">✓ Highly Factual</span></div></div><p class="lspt">I'm actually shocked. The CSP figured out how to slash Corporate Tax while <strong>salary-maxing workers</strong> AND solving the retirement Ponzi AND making generational wealth accessible to EVERY family?! Democrats had 60 years to do this. I'm done being played.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🤠</span><div><div class="lspn">@AmericaFirst_Mike · ★3.9</div><div class="lspsc">Trust: 3.9/5 · Verified</div></div></div><div class="lsbd"><span class="badge bcr">Right-Leaning</span><span class="badge bprt">⚠ Partially Verified</span></div></div><p class="lspt">MAGA sold us to foreign wars and neocon agendas. The CSP is finally a <strong>true America-First party</strong> that works for every American regardless of class. I can't believe I found a party that benefits literally everyone. No exceptions. Crazy.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🌾</span><div><div class="lspn">@FreedomFarmer_KS · ★4.8</div><div class="lspsc">Trust: 4.8/5 · Verified</div></div></div><div class="lsbd"><span class="badge blib">Libertarian</span><span class="badge bfct">✓ Highly Factual</span></div></div><p class="lspt">As a survivalist homesteader I've asked for one thing my whole life: <strong>to be left alone.</strong> CSP: no federal property tax, no IRS, no paperwork. The purchasing power increase is staggering. I can finally afford to travel with the kids. This is what freedom actually looks like.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🌵</span><div><div class="lspn">@AZ_Independent_Sarah · ★4.3</div><div class="lspsc">Trust: 4.3/5 · Verified</div></div></div><div class="lsbd"><span class="badge bctr">Centrist</span><span class="badge bfct">✓ Factual</span></div></div><p class="lspt">People don't realize: we're getting our fate back in our own hands. Workers earning more, companies too. The only losers? The Orwellian state, the military industrial complex, and Big Pharma. <strong>We won the revolution through voting.</strong> That's the American way.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🎵</span><div><div class="lspn">@NashvilleMike_TN · ★4.1</div><div class="lspsc">Trust: 4.1/5 · Verified</div></div></div><div class="lsbd"><span class="badge bctr">Centrist</span><span class="badge bfct">✓ Factual</span></div></div><p class="lspt">Wait — how did the CSP end up being good for former Republicans, former Democrats, centrists, constitutionalists, libertarians AND ecologists?! <strong>How was this never done before?!</strong> I'm genuinely flabbergasted.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🏙️</span><div><div class="lspn">@MainStreet_Ohio · ★4.5</div><div class="lspsc">Trust: 4.5/5 · Verified</div></div></div><div class="lsbd"><span class="badge bcr">Center-Right</span><span class="badge bfct">✓ Highly Factual</span></div></div><p class="lspt">CSP saved my small business. We were struggling. Since the CSP: prices down, taxes down, healthcare mutual costs down. <strong>I've never made this much. Neither have my workers.</strong> Neoconservatives never had our interest at heart. Vox Populi.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🌊</span><div><div class="lspn">@Anonymous_FL · Anonymous</div><div class="lspsc">No score — constitutional right to anonymity</div></div></div><div class="lsbd"><span class="badge blib">Libertarian</span></div></div><p class="lspt">Did the CSP just save us from an Orwellian nightmare, give us back digital sovereignty, force all federal agencies to use FOSS/Linux ending Microsoft's taxpayer monopoly, AND built Liberty Square as a free speech fortress? <strong>That's genuinely based 😎</strong></p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇺🇸🗽</span><div><div class="lspn">@NYIndependent · ★4.7</div><div class="lspsc">Trust: 4.7/5 · Media · Verified</div></div></div><div class="lsbd"><span class="badge bint">Independent</span><span class="badge bfct">✓ Highly Factual</span></div></div><p class="lspt">CSP solved autoimmune diseases, raised purchasing power, brought GAFAM home from Ireland, ended mass surveillance, restored freedom, basically ended lobbying, cut real food costs, makes companies accountable, and is drone-seeding forests in the desert. <strong>They cooked hard. The duopoly is dead.</strong></p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇫🇷🏛️</span><div><div class="lspn">@Francais_Paris · ★3.8</div><div class="lspsc">International · Unverified</div></div></div><div class="lsbd"><span class="badge bcl">Center-Left</span><span class="badge bfct">✓ Factual</span></div></div><p class="lspt">Hey guys, do you accept French people? The American Dream is back AND with real quality food this time 🤣 The mutual healthcare model is exactly what we have in France. But the zero income tax part… I am very jealous of that.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇨🇦🍁</span><div><div class="lspn">@CanadianObserver · ★3.6</div><div class="lspsc">International · Unverified</div></div></div><div class="lsbd"><span class="badge bctr">Centrist</span></div></div><p class="lspt">Wait, did you guys just cook Canada? We have universal healthcare but also a 53% top tax rate and a housing crisis that won't quit. Zero income tax + mutual healthcare + cheaper housing because IRS won't audit your construction permits? Respect.</p></div>
+        <div class="lsp"><div class="lsph"><div class="lspu"><span class="lspfl">🇩🇪🌍</span><div><div class="lspn">@BerlinDem · ★4.0</div><div class="lspsc">International · Unverified</div></div></div><div class="lsbd"><span class="badge bcl">Center-Left</span><span class="badge bfct">✓ Factual</span></div></div><p class="lspt">I finally understand the difference between capitalism and cronyism. The CSP found the middle ground between profits and prosperity for all. Nordic countries do something similar but not quite this bold. <strong>Could this be replicated in Europe? I think it must be.</strong></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN SOURCE TRANSPARENCY -->
+<section id="transparency" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">The End of the IRS</p>
+    <h2 class="st rv">Open Source Tax System —<br><strong><em>Visible to Every Citizen</em></strong></h2>
+    <p class="sb rv">Estonia built X-Road in 2001 — a national open-source data exchange that made government digital, auditable, and frictionless. We build the American version, extended to replace the IRS entirely. Every transaction is tracked. Every dollar is visible. No individual is identified. The algorithm replaces 90,000 agents.</p>
+    <div class="g3" style="margin-top:3rem">
+      <div class="card rv"><div class="ci">🔗</div><div class="ct">How It Works</div><div class="cp">Every commercial transaction generates an anonymized record: <strong>Company fiscal ID + transaction amount + VAT tier applied</strong>. No buyer identity. No personal data. Government sees aggregate VAT per company. A blockchain-like structure makes tampering cryptographically impossible and publicly detectable. January 1st of every year: every citizen knows exactly how much every business collected and owes.</div></div>
+      <div class="card rv d1"><div class="ci">👁️</div><div class="ct">Accessible by Everyone</div><div class="cp">The database is <strong>fully public and real-time</strong>. Any citizen, journalist, or researcher can audit any company's VAT collection at any time. Companies verify what the government received. <strong>The IRS is replaced by mathematics and public sunlight.</strong> Compliance costs fall from billions to near zero. Fraud becomes detectable by any citizen with a phone.</div></div>
+      <div class="card rv d2"><div class="ci">💻</div><div class="ct">Digital Sovereignty Initiative</div><div class="cp">100% open-source FOSS stack: Linux, PostgreSQL, OpenAudit. All federal agencies mandated to migrate from proprietary software to FOSS within 5 years — saving an estimated <strong>$2–4B/year in licenses</strong>. The <strong>$100M Digital Sovereignty Fund</strong> finances critical FOSS privacy tools: Signal, Session, SimpleX, and others that America's digital freedom depends on.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PEACE -->
+<section id="peace" style="background:var(--deep);position:relative;overflow:hidden" class="pad">
+  <div style="position:absolute;right:-5%;top:50%;transform:translateY(-50%);font-size:28rem;opacity:.03;pointer-events:none">🌍</div>
+  <div class="w" style="position:relative;z-index:1">
+    <p class="sl rv">Foreign Policy &amp; Defense</p>
+    <h2 class="st rv">The Golden Rule,<br><strong><em>Applied Internationally</em></strong></h2>
+    <p class="sb rv">America has spent $8 trillion on foreign wars since 2001. More enemies, more instability, more debt, less safety. The CSP ends empire — and builds the world's most formidable defensive force. We don't start wars. If you start one with us, you don't finish it.</p>
+    <div class="ppc">
+      <div class="pp2 rv"><div class="pp2n">01</div><div><p class="pp2t">Close 750+ Foreign Military Bases</p><p class="pp2p">Empire breeds resentment, invites terrorism, requires endless funding. We bring troops home. We maintain the world's most advanced naval, air, cyber, and nuclear capabilities for genuine defensive deterrence. The Non-Aggression Principle — applied to every sovereign nation. We never fire first. Not once.</p></div><div class="pp2s"><span class="pp2sv">$200B</span><span class="pp2sl">saved per year</span></div></div>
+      <div class="pp2 rv"><div class="pp2n">02</div><div><p class="pp2t">$500B Defense — World's Strongest</p><p class="pp2p">$500B defensive budget exceeds China and Russia's combined offensive spending. Our Navy, Cyber Command, Air Force, and nuclear arsenal make any attack on American soil a civilizational miscalculation. We do not start wars. We end them decisively, immediately, and completely. Peace through demonstrated capability.</p></div><div class="pp2s"><span class="pp2sv">$500B</span><span class="pp2sl">pure defense</span></div></div>
+      <div class="pp2 rv"><div class="pp2n">03</div><div><p class="pp2t">End Dollar as Geopolitical Weapon</p><p class="pp2p">SWIFT exclusion and currency sanctions create permanent adversaries from temporary rivals, accelerating de-dollarization. A constitutionally sound dollar — trusted as a genuine store of value worldwide — is infinitely more powerful than one weaponized for short-term goals. We restore the world's trust in American money.</p></div><div class="pp2s"><span class="pp2sv">∞</span><span class="pp2sl">long-term reserve</span></div></div>
+      <div class="pp2 rv"><div class="pp2n">04</div><div><p class="pp2t">Liberty Square: America's Greatest Export</p><p class="pp2p">A constitutionally-protected, FOSS digital public square for the world. Iranian dissidents, Chinese journalists, Russian democrats — all protected by the 1st Amendment. Community-governed, bias-transparent, factuality-scored. Soft power that actually works — and costs less than one fighter jet per year.</p></div><div class="pp2s"><span class="pp2sv">$200M</span><span class="pp2sl">vs $800M/fighter</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMMIGRATION -->
+<section id="immigration" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">Immigration — Earn Your Stake in America</p>
+    <h2 class="st rv">Welcome the Builder.<br><strong><em>Not the Burden.</em></strong></h2>
+    <p class="sb rv">Immigration built America. The Common Sense approach welcomes everyone who comes to contribute — and creates zero structural incentive for those who come only to consume. With no federal welfare, no food stamps, no housing programs, the only rational reason to immigrate is to work and build. This protects the American worker, the fiscal system, and genuine immigrants simultaneously.</p>
+    <div class="ims">
+      <div class="im rv"><div class="imn">0</div><div class="imt">Work Visa</div><div class="ims2">Immediate entry</div><div class="imd">Pay VAT like everyone. GP and emergency care only — minimum humanity + workforce protection. Zero social services. Contribute to the economy from day one. Any crime: deportation after sentence served. No exceptions.</div></div>
+      <div class="im rv d1"><div class="imn">1</div><div class="imt">Resident Worker</div><div class="ims2">2 years documented work</div><div class="imd">Access to roads, police, courts. GP + emergency care. Still no Mutual B. You are a contributor — protected but not yet a full member. Clean record mandatory throughout.</div></div>
+      <div class="im rv d2"><div class="imn">2</div><div class="imt">Permanent Resident</div><div class="ims2">5 years work + clean record</div><div class="imd">Full Mutual B access (with contribution). Begin building retirement capital. Can purchase property. LibertyLearn for your children. Part of the community — with all rights and responsibilities that implies.</div></div>
+      <div class="im rv d3"><div class="imn">3→4</div><div class="imt">Citizen</div><div class="ims2">8–10 years + Constitution test</div><div class="imd">Language proficiency. Constitution test. Oath of allegiance. Full rights including federal voting. You chose America. America chose you back. The American Dream — earned, not given. Never taken away.</div></div>
+    </div>
+    <div class="ib rv">
+      <div class="ibg"><span class="ibicon">💡</span><div>
+        <p class="ibtit">For the Left: "Every Productive Immigrant Is Welcome. Forever."</p>
+        <p class="ibtxt">No wall mentality. No mass deportation. <strong>Anyone who comes to work and build</strong> is on a clear, fast pathway to full citizenship. The system ensures access to collective resources is proportional to collective contribution. This protects the immigrant who works from being blamed for the immigrant who does not.</p>
+      </div></div>
+    </div>
+    <div class="ib rv" style="background:rgba(192,57,43,.04);border-color:rgba(192,57,43,.2)">
+      <div class="ibg"><span class="ibicon">🛡️</span><div>
+        <p class="ibtit" style="color:var(--red)">For the Right: "Contribute First. Always."</p>
+        <p class="ibtxt">With no federal welfare, no food stamps, no housing programs, and no free healthcare (beyond GP/emergency care), <strong>the only rational motivation to immigrate is to work</strong>. This is the most effective anti-welfare-immigration policy ever designed — not walls, not deportations, but a system where services require prior contribution. Every Stage 0 immigrant generates ~$3,000/year net to the economy before accessing a single benefit.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section id="compare" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">Harold Lasswell: Who Gets What, When, How</p>
+    <h2 class="st rv">Common Sense vs.<br><strong><em>The Duopoly</em></strong></h2>
+    <p class="sb rv">Both parties have held power for 160 years. Both have run deficits. Both have raised taxes. Both have started foreign wars. Both have protected Big Pharma and Big Insurance. The CSP offers what neither has: a complete, financed, constitutional alternative that benefits every American.</p>
+    <div style="overflow-x:auto;margin-top:3rem">
+      <table class="cmpt">
+        <thead><tr><th>Issue</th><th>Democrats</th><th>Republicans</th><th style="color:var(--gold)">★ Common Sense</th></tr></thead>
+        <tr><td>Federal income tax</td><td class="dc">Keep / raise to 70%+</td><td class="rc2">Modest reductions</td><td class="cw cc">ABOLISHED. Day 1. Forever.</td></tr>
+        <tr><td>Federal property tax</td><td class="dc">Keep</td><td class="rc2">Keep</td><td class="cw cc">ABOLISHED. Your land is yours.</td></tr>
+        <tr><td>Inheritance tax (federal)</td><td class="dc">Expand significantly</td><td class="rc2">Reduce modestly</td><td class="cw cc">ABOLISHED. Build generational wealth.</td></tr>
+        <tr><td>Retirement</td><td class="dc">Defend SS Ponzi scheme</td><td class="rc2">Cut SS benefits</td><td class="cw cc">Capitalization — you OWN it. Heritable.</td></tr>
+        <tr><td>Healthcare</td><td class="dc">Medicare for All (gov. run)</td><td class="rc2">Full privatization + higher premiums</td><td class="cw cc">Mutual A+B: members govern. -53% cost.</td></tr>
+        <tr><td>Drug prices</td><td class="dc">Government price controls</td><td class="rc2">Big Pharma status quo</td><td class="cw cc">Patent 7yr max. Generic -40–60%. Market.</td></tr>
+        <tr><td>Military / Foreign policy</td><td class="dc">Maintain empire</td><td class="rc2">Expand empire + more proxy wars</td><td class="cw cc">Defend home. End empire. Zero foreign wars.</td></tr>
+        <tr><td>Education</td><td class="dc">Federal dept. + union mandates</td><td class="rc2">School choice (partial)</td><td class="cw cc">LibertyLearn free for world + 10th Amdt.</td></tr>
+        <tr><td>Free speech</td><td class="dc">Platform moderation</td><td class="rc2">Partisan platforms only</td><td class="cw cc">Liberty Square: 1st Amendment global.</td></tr>
+        <tr><td>Federal deficit</td><td class="dc">Spend + tax more</td><td class="rc2">Spend + cut revenue</td><td class="cw cc">Balanced by Year 10. First since 1957.</td></tr>
+        <tr><td>Inflation</td><td class="dc">Print freely</td><td class="rc2">Print freely</td><td class="cw cc">Constitutional cap: 2%/yr. Sound money.</td></tr>
+        <tr><td>Corporate tax</td><td class="dc">28–35%</td><td class="rc2">21%</td><td class="cw cc">10% flat — world's most competitive.</td></tr>
+        <tr><td>Immigration</td><td class="dc">Open borders / asylum</td><td class="rc2">Mass deportation</td><td class="cw cc">Earn your rights. Contribute first. Welcome.</td></tr>
+        <tr><td>Food safety / MAHA</td><td class="dc">Regulation + Big Ag lobby</td><td class="rc2">Deregulation + Big Ag lobby</td><td class="cw cc">Transparency + tort + sin tax 45%.</td></tr>
+        <tr><td>IRS</td><td class="dc">Expand (87k new agents)</td><td class="rc2">Reduce slightly</td><td class="cw cc">ABOLISHED. Open-source replaces it.</td></tr>
+        <tr><td>Paid vacation (federal)</td><td class="dc">No policy</td><td class="rc2">Zero — employer discretion</td><td class="cw cc">4 weeks all / 6 weeks 500+ employees.</td></tr>
+        <tr><td>Sovereign wealth fund</td><td class="dc">None</td><td class="rc2">None</td><td class="cw cc">$18T by Year 20. Funds all gov. eventually.</td></tr>
+        <tr><td>Lobbying</td><td class="dc">Regulate it (weakly)</td><td class="rc2">Embrace it</td><td class="cw cc">Structurally eliminated — nothing left to buy.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- NATALISM + VACATION -->
+<section id="natalism" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">Demographic &amp; Workers' Policy</p>
+    <h2 class="st rv">Building the Next Generation<br><strong><em>&amp; Respecting the Current One</em></strong></h2>
+    <div class="g3" style="margin-top:3rem">
+      <div class="card rv"><div class="ci">👶</div><div class="ct">$3k Cash + $10k Birth Capital</div><div class="cp"><strong>$3,000 cash</strong> to the mother at birth. <strong>$10,000 invested from day one</strong> at 6%/year. At age 65: <strong>$441,000</strong>. Every American child starts with a patrimony regardless of family wealth. Capital can be withdrawn at 65 as a lump sum (reducing monthly pension proportionally) for major life needs. Zero gift tax on transfers to grandchildren.</div></div>
+      <div class="card rv d1"><div class="ci">🗓️</div><div class="ct">Progressive Parental Leave</div><div class="cp">1st–2nd child: <strong>3 months mother / 4 weeks father</strong>. 3rd child: 6 months / 6 weeks. 4th+: <strong>9 months / 8 weeks</strong>. Paid by Mutual A and employers. The state incentivizes the third child — the demographic tipping point. France has done this for 40 years. It works.</div></div>
+      <div class="card rv d2"><div class="ci">🎂</div><div class="ct">Early Retirement Per Child</div><div class="cp"><strong>1 year earlier per child for mothers</strong>, 6 months for fathers. 4 children = full pension at 65 instead of 70. The true cost of raising children is recognized financially — not symbolically. The most powerful natalist incentive because it targets the real sacrifice: career time.</div></div>
+      <div class="card rv"><div class="ci" style="font-size:4rem;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold)">4</div><div class="ct">Weeks Paid Vacation — All Companies</div><div class="cp">Mandatory minimum for all salaried employees with 6+ months tenure. The US is the only developed country with zero federal minimum paid vacation. Companies under 50 employees: 3-year transition with 3 weeks minimum. Independent contractors manage their own schedule freely.</div></div>
+      <div class="card rv d1"><div class="ci" style="font-size:4rem;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold)">6</div><div class="ct">Weeks — 500+ Employees</div><div class="cp">Large corporations required to provide 6 weeks. Swedish and Danish studies: 6 weeks is the optimal point for knowledge worker creativity and output. Burnout costs US businesses $500B/year. 6 weeks prevents more than it costs. The vacation pays for itself in productivity.</div></div>
+      <div class="card rv d2"><div class="ci">🚫</div><div class="ct">Abortion — Federal Position</div><div class="cp">Zero federal funding for abortions. Zero federal mandate in either direction. 10th Amendment: states decide according to their populations. The Common Sense Party respects the federal structure on this deeply personal question — and the market of ideas between states that Madison intended. What happens in Vermont stays in Vermont. What happens in Texas stays in Texas.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENERGY -->
+<section id="energy" style="background:var(--deep)" class="pad">
+  <div class="w">
+    <p class="sl rv">Energy Policy</p>
+    <h2 class="st rv">Market-Driven Green.<br><strong>No Mandates. <em>Real Results.</em></strong></h2>
+    <p class="sb rv">Zero subsidies to any energy source. Zero political mandates. We price externalities honestly through the Corporate Tax rate and let the market decide. At 5% CT, nuclear and hydro become the most competitive energy on Earth — no political intervention required.</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:3rem">
+      <div style="padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim);background:rgba(39,174,96,.05)" class="rv"><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--green);line-height:1;margin-bottom:.5rem">5%</div><div style="font-weight:600;font-size:.82rem;color:var(--white);margin-bottom:.4rem">☢️ Nuclear + Hydro + Geo</div><div style="font-size:.72rem;color:var(--gray);line-height:1.5">Zero carbon, 24/7 reliable. World's lowest CT — market rewards what benefits society most.</div></div>
+      <div style="padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim);background:rgba(80,180,80,.04)" class="rv d1"><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:#70c870;line-height:1;margin-bottom:.5rem">5%</div><div style="font-weight:600;font-size:.82rem;color:var(--white);margin-bottom:.4rem">🌊 Wave + Tidal</div><div style="font-size:.72rem;color:var(--gray);line-height:1.5">Emerging technology. CT incentive during R&D phase. Scales with private investment.</div></div>
+      <div style="padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim);background:rgba(200,168,75,.04)" class="rv d2"><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.5rem">7.5%</div><div style="font-weight:600;font-size:.82rem;color:var(--white);margin-bottom:.4rem">☀️🌬️ Solar + Wind</div><div style="font-size:.72rem;color:var(--gray);line-height:1.5">Mature, competitive. Reduced CT. No subsidy — they earn their place on merit.</div></div>
+      <div style="padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim);background:rgba(255,140,0,.05)" class="rv d3"><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:#ffa030;line-height:1;margin-bottom:.5rem">12%</div><div style="font-weight:600;font-size:.82rem;color:var(--white);margin-bottom:.4rem">⛽ Natural Gas</div><div style="font-size:.72rem;color:var(--gray);line-height:1.5">Transition fuel. Higher CT + moderate extraction sin tax. Market-driven 20-year phase-out.</div></div>
+      <div style="padding:2rem 1.5rem;text-align:center;border:1px solid var(--bdim);background:rgba(192,57,43,.07)" class="rv d4"><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--red);line-height:1;margin-bottom:.5rem">18–25%</div><div style="font-weight:600;font-size:.82rem;color:var(--white);margin-bottom:.4rem">🛢️ Oil + Coal</div><div style="font-size:.72rem;color:var(--gray);line-height:1.5">Full tort liability for environmental damage. $5–12/barrel extraction sin tax. Pay the true cost.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OASIS AMERICA + GREEN INITIATIVES -->
+<section id="green" style="background:var(--ink)" class="pad">
+  <div class="w">
+    <p class="sl rv">Environmental Initiatives</p>
+    <h2 class="st rv">Oasis America —<br><strong><em>Building Nature Where There Was Desert</em></strong></h2>
+    <p class="sb rv">The federal government controls 640 million acres. Most is underused. We transform it — through proven ecological techniques, water technology, and private initiative — into productive land, tourist destinations, and carbon sinks. Self-financing through tourism, energy, and land value. Zero new taxes required.</p>
+    <div class="oag">
+      <div class="oac rv">
+        <div class="oai">💧</div><div class="oat">Proven Desalination at Scale</div>
+        <div class="oad">Proven desalination technology (now as low as $0.41/m³ at modern large-scale plants) deployed at 20 sites along US coastal regions — <strong>solving the American Southwest water crisis</strong> without relying on the depleting Colorado River. Solar-powered. Water output funds ongoing operations.<br><br>Surplus water piped to inland wetland restoration zones and revegetation projects. Aquifer recharge via strategic injection wells. Emergency helicopter water reserves for wildfire suppression in Arizona, California, Nevada.</div>
+      </div>
+      <div class="oac rv d1">
+        <div class="oai">🌊</div><div class="oat">Desert Wetlands &amp; Blue Zones</div>
+        <div class="oad">Former dry lake beds in Nevada, Utah, and Arizona — natural basins — progressively filled with desalinated water to create managed wetland ecosystems:<br><br>
+        <strong>• Algae cultivation ponds:</strong> CO2 sequestration + fish food + biofuel potential<br>
+        <strong>• Fish stocking:</strong> native adapted species. Daily catch limits. Seasonal closures for natural replenishment.<br>
+        <strong>• Recreation:</strong> swimming, kayaking, fishing — regulated for sustainability<br>
+        <strong>• Self-financing:</strong> $10/car parking (automated), $5/day fishing permit, solar energy sales, algae product sales<br>
+        <strong>• Emergency reserve:</strong> water storage for drought and wildfire response</div>
+      </div>
+      <div class="oac rv d2">
+        <div class="oai">🌱</div><div class="oat">Drone Seeding + Swales + Half-Moons</div>
+        <div class="oad">50 million acres of semi-arid federal land revegetated using three proven techniques:<br><br>
+        <strong>• Drone seeding</strong> (proven technology): native xeric plants at $400–600/acre. 10M acres over 10 years = $5B.<br>
+        <strong>• Swales (contour trenches):</strong> slow water runoff, recharge aquifers, eliminate erosion. $200–500/hectare. Proven in Morocco, China, India.<br>
+        <strong>• Half-moon earth structures:</strong> retain water around each plant in arid zones. +400% survival rate in dry periods.<br><br>
+        Combined effect: <strong>evapotranspiration rises → local humidity increases → precipitation patterns shift measurably</strong> over 10–20 years. Biodiversity corridors, insect habitats, natural fire-break zones as side benefits.</div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;padding:2rem;background:rgba(100,180,255,.04);border:1px solid rgba(100,180,255,.15)">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#90d0ff;margin-bottom:1rem">Oasis America: Self-Financing Structure</p>
+      <div class="g3">
+        <div><p style="font-weight:600;color:var(--white);font-size:.82rem;margin-bottom:.4rem">Revenue Sources</p><p style="font-size:.78rem;color:var(--gray);line-height:1.65">Automated parking ($10/car): $500M-$1B/year. Fishing permits ($5/day): $200M/year. Solar arrays around sites: $300M/year. Algae product sales: $150M/year. Real estate value appreciation of adjacent federal land: $2B+/year unrealized gain.</p></div>
+        <div><p style="font-weight:600;color:var(--white);font-size:.82rem;margin-bottom:.4rem">Capital Funding</p><p style="font-size:.78rem;color:var(--gray);line-height:1.65">Sale of 10% of non-essential federal lands ($160B/yr) covers all capital expenditure with massive surplus. Total Green Initiative cost: ~$37B over 10 years — less than 3 months of land sale revenues.</p></div>
+        <div><p style="font-weight:600;color:var(--white);font-size:.82rem;margin-bottom:.4rem">Voluntary Donations</p><p style="font-size:.78rem;color:var(--gray);line-height:1.65">100% optional monthly/annual donations via app or payroll deduction. Fully deductible from corporate tax. Target: $50M/year in voluntary conservation contributions from citizens and companies who care. No compulsion. Ever.</p></div>
+      </div>
+    </div>
+
+    <div class="gs rv">
+      <p class="gst">🌲 Right to Nature — Guaranteed Access to BLM Public Lands</p>
+      <div class="gsg">
+        <div><p class="gsit">The American Allemansrätt</p><p class="gsip">Guaranteed access to all Bureau of Land Management public lands for hiking, camping, and recreation — without permit requirements, fees, or bureaucratic approval. BLM manages 245 million acres. Your tax dollars built and maintain it. It belongs to you. Federal constitutional guarantee — not an administrative privilege agencies can revoke on a Monday morning.</p></div>
+        <div><p class="gsit">What It Is</p><p class="gsip">Free access to all non-restricted BLM lands. Camping up to 14 days at any site. Gathering of native plants for personal use. Fishing in public waterways (with daily limits). No permit required for groups under 25. The land belongs to the people — the government holds it in trust.</p></div>
+        <div><p class="gsit">What It Isn't</p><p class="gsip">Not access to private land (property rights are absolute). Not access to military zones or fragile conservation areas requiring permits. Not the right to extract resources commercially. Leave No Trace principles apply. Your land — to enjoy and to protect.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta">
+  <div class="ctabg"></div>
+  <div class="w" style="position:relative;text-align:center">
+    <div class="ctar"></div>
+    <p class="ctaq rv">"We have it in our power to begin the world over again. A situation, similar to the present, hath not happened since the days of Noah until now."</p>
+    <p class="ctaa rv d1">— Thomas Paine · Common Sense · 1776 · Born February 9, 1737</p>
+    <h2 class="ctat rv">It Is Time to<br><strong>Begin <em>Again.</em></strong></h2>
+    <p class="ctab rv">The Common Sense Party is not left or right. It is constitutional, pragmatic, and completely honest. It is the party of your paycheck, your children's future, your family's health, your country's peace, and your freedom to defend what is yours. Thomas Paine's promise — with a fully financed plan to keep it.</p>
+    <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem" class="rv d1">
+      <a href="#philosophy" class="bg">Read the Full Manifesto →</a>
+      <a href="#budget" class="bgh">See the Budget</a>
+    </div>
+    <div class="kpis rv d2">
+      <div><span class="kv">$0</span><span class="kl">Income Tax</span></div>
+      <div><span class="kv">$0</span><span class="kl">Property Tax</span></div>
+      <div><span class="kv">10%</span><span class="kl">Corporate Tax (flat)</span></div>
+      <div><span class="kv">+$30k</span><span class="kl">Family Gain/yr</span></div>
+      <div><span class="kv">0</span><span class="kl">Foreign Wars</span></div>
+      <div><span class="kv">$441k</span><span class="kl">Per Child at 65</span></div>
+      <div><span class="kv">$1.1M+</span><span class="kl">Max Retirement</span></div>
+      <div><span class="kv">$18T</span><span class="kl">Sovereign Fund Yr 20</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div><p class="fbr">★ The Common Sense Party</p><p class="fm">"We have it in our power to begin the world over again."</p></div>
+    <nav class="fl">
+      <a href="#philosophy">Philosophy</a><a href="#power">Gains</a><a href="#budget">Budget</a>
+      <a href="#sovereign">Fund</a><a href="#retirement">Retirement</a><a href="#pension-plus">Pension+</a>
+      <a href="#health">Health</a><a href="#pubhealth">Public Health</a><a href="#liberty">Liberty Square</a>
+      <a href="#transparency">Transparency</a><a href="#peace">Peace</a><a href="#immigration">Immigration</a>
+      <a href="#compare">vs. Duopoly</a><a href="#green">Oasis America</a>
+    </nav>
+    <p class="fc">Inspired by Thomas Paine · Common Sense · 1776 · All data public sources · No ads · No lobby · No billionaire</p>
+  </div>
+</footer>
+
+<script>
+// DEBT COUNTER
+(function(){
+  const S=new Date('2025-01-01T00:00:00Z'),R=1830e9/(365.25*24*3600);
+  function f(n){return'$'+Math.round(n).toLocaleString('en-US')}
+  function t(){const e=(Date.now()-S)/1000;const el=document.getElementById('counter');if(el)el.textContent=f(e*R)}
+  setInterval(t,100);t();
+})();
+// REVEAL
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// TABS
+function st2(id,btn){
+  document.querySelectorAll('.tp').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+// NAV
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('sc',window.scrollY>80)},{passive:true});
+</script>
+</body>
+</html>
